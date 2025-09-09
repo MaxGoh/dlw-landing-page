@@ -77,8 +77,8 @@
 }
 
 @theme inline {
-  /* Updated default font to Ppmori, using system fonts for Reddit thread text */
-  --font-sans: "Ppmori", sans-serif;
+  /* Updated default font to Figtree */
+  --font-sans: "Figtree Variable", sans-serif;
   --font-mono: var(--font-geist-mono);
   /* Replaced Reddit Sans with system fonts for better compatibility */
   --font-reddit-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
