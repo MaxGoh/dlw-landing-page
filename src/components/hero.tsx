@@ -239,12 +239,12 @@ export function Hero() {
                 </div>
 
                 {/* Post title */}
-                <h4 className="font-semibold text-lg text-black mb-3 leading-tight">
+                <h4 className="font-semibold text-lg text-black mb-3 leading-tight" style={{ fontFamily: 'Verdana, Geneva, sans-serif' }}>
                   Struggling to find qualified leads for my B2B SaaS
                 </h4>
 
                 {/* Post content */}
-                <p className="text-black text-sm leading-relaxed mb-4">
+                <p className="text-black text-sm leading-relaxed mb-4" style={{ fontFamily: 'Verdana, Geneva, sans-serif' }}>
                   I've tried cold email, LinkedIn outreach, and paid ads but the quality is terrible. Most leads aren't
                   even in our target market. How do you find people who actually need your product?
                 </p>
@@ -284,12 +284,12 @@ export function Hero() {
                 </div>
 
                 {/* Post title */}
-                <h4 className="font-semibold text-lg text-black mb-3 leading-tight">
+                <h4 className="font-semibold text-lg text-black mb-3 leading-tight" style={{ fontFamily: 'Verdana, Geneva, sans-serif' }}>
                   Anyone else tired of generic lead gen tools?
                 </h4>
 
                 {/* Post content */}
-                <p className="text-black text-sm leading-relaxed mb-4">
+                <p className="text-black text-sm leading-relaxed mb-4" style={{ fontFamily: 'Verdana, Geneva, sans-serif' }}>
                   Every tool promises "high-quality leads" but they're all scraped from the same databases. I want to
                   find prospects who are actually talking about needing our solution, not just fit our ICP on paper.
                 </p>
@@ -329,12 +329,12 @@ export function Hero() {
                 </div>
 
                 {/* Post title */}
-                <h4 className="font-semibold text-lg text-black mb-3 leading-tight">
+                <h4 className="font-semibold text-lg text-black mb-3 leading-tight" style={{ fontFamily: 'Verdana, Geneva, sans-serif' }}>
                   Reddit is an untapped goldmine for B2B research
                 </h4>
 
                 {/* Post content */}
-                <p className="text-black text-sm leading-relaxed mb-4">
+                <p className="text-black text-sm leading-relaxed mb-4" style={{ fontFamily: 'Verdana, Geneva, sans-serif' }}>
                   I've been lurking in industry subreddits and the insights are incredible. People share their real
                   problems, not what they think you want to hear. Wish there was a way to systematically track these
                   conversations...
