@@ -6,10 +6,12 @@ import { Discovery } from "@/components/discovery"
 import { Engage } from "@/components/engage"
 import { GenerateBacklink } from "@/components/generate-backlink"
 import { Leads } from "@/components/leads"
+import { Navbar } from "@/components/navbar"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-background via-card to-secondary/30">
+      <Navbar />
       <Hero />
       <Stats />
       <WhyReddit />
