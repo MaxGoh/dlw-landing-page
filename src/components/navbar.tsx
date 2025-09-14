@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 
 export function Navbar() {
@@ -17,9 +18,12 @@ export function Navbar() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-sm"></div>
-                </div>
+                <Image
+                  src="/dlw-logo.svg"
+                  alt="DLW Logo"
+                  width={80}
+                  height={80}
+                />
               </div>
             </div>
           </div>
