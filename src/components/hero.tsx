@@ -185,9 +185,7 @@ export function Hero() {
             <p className="text-xl text-muted-foreground leading-relaxed text-pretty font-[family-name:var(--font-open-sans)] flex items-start gap-3 justify-center">
               <RedditIcon className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
               <span>
-                Stop missing 50+ buyer conversations daily on Reddit. Turn
-                'looking for recommendations' posts into qualified leads
-                automatically.
+                Isolate what matters. Filter the noise. Drive traffic, build leads and authority for your business.
               </span>
             </p>
           </div>
@@ -226,8 +224,7 @@ export function Hero() {
               </Button>
             </form>
             <p className="text-sm text-muted-foreground">
-              We'll analyze your website to find the best subreddits where your
-              customers are discussing their pain points.
+              We'll analyze your business to build up a profile of your target audience and the best subreddits to engage with them.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-primary/20 shadow-sm justify-center">
               <div className="relative">
