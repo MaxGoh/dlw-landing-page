@@ -236,16 +236,6 @@ export function Hero() {
               </span>
             </div>
           </div>
-
-          {/* Supported Platforms */}
-          <div className="flex items-center gap-8 pt-4 justify-center">
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-foreground">
-                Supported Platforms{" "}
-              </h4>
-              <PlatformLogos />
-            </div>
-          </div>
         </div>
       </div>
     </section>
