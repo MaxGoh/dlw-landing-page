@@ -158,7 +158,7 @@ export function Hero() {
         {/* Hero Content */}
         <div className="space-y-8 text-center">
           <div className="space-y-6">
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <a
                 href="/blog"
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-secondary text-secondary transition-all duration-200 hover:scale-105 group font-medium bg-white"
@@ -175,7 +175,7 @@ export function Hero() {
                   <ArrowRight className="text-white flex-row w-4 h-4" />
                 </div>
               </a>
-            </div>
+            </div> */}
 
             <h1 className="text-5xl lg:text-6xl leading-tight text-balance text-secondary font-black">
               <span className="text-primary">Listen</span> to what actually{" "}

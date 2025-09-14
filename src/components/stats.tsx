@@ -38,8 +38,8 @@ export function Stats() {
             }, 16);
           };
 
-          setTimeout(() => animateCount(10000, "subreddits"), 200);
-          setTimeout(() => animateCount(200, "keywords"), 400);
+          setTimeout(() => animateCount(100000, "subreddits"), 200);
+          setTimeout(() => animateCount(500, "keywords"), 400);
           setTimeout(() => animateCount(24, "monitoring"), 600);
         }
       },
@@ -59,13 +59,13 @@ export function Stats() {
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
             <Card className="p-6 text-center border-ridge bg-white">
               <div className="text-3xl font-bold mb-2">
-                {animatedStats.subreddits}+
+                {animatedStats.subreddits}
               </div>
               <div className="text-sm">Subreddits Monitored</div>
             </Card>
             <Card className="p-6 text-center border-ridge bg-white">
               <div className="text-3xl font-bold mb-2">
-                {animatedStats.keywords}+
+                {animatedStats.keywords}
               </div>
               <div className="text-sm">Keywords Tracked</div>
             </Card>
