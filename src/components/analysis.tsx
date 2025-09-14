@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import { JsonCodeDisplay } from "@/components/json-code-display"
 import { ArrowRight, Calendar, Wand2, CalendarDays } from "lucide-react"
 
 export function Analysis() {
@@ -25,28 +26,51 @@ export function Analysis() {
     return () => observer.disconnect()
   }, [])
 
+  const sampleData = {
+    "company": "DoLessWork.ai",
+    "tagline": "Stop missing 50+ buyer conversations daily on Reddit",
+    "product": "AI-powered Reddit social listening platform",
+    "core_features": [
+      "Auto-discovers subreddits where your customers discuss pain points",
+      "Converts 'looking for recommendations' posts into qualified leads",
+      "AI-crafted authentic Reddit responses",
+      "Lead scoring with CRM integration",
+      "ROI and conversion tracking"
+    ],
+    "target": "B2B SaaS companies and marketers",
+    "pricing": {
+      "free_tier": "Available",
+      "trial": "30 days",
+      "paid_tiers": "Custom pricing"
+    },
+    "key_metric": "1.2B monthly Reddit users with 50M+ posts/month",
+  }
+
   return (
-    <section id="analysis-section" className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="analysis-section" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Purple gradient background container with rounded corners */}
-        <div 
-          className={`relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-400 via-purple-300 to-purple-200 px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${
-            isVisible 
-              ? "opacity-100 scale-100" 
-              : "opacity-0 scale-90"
-          }`}
+        <div
+          className={`relative rounded-3xl bg-gradient-to-br from-purple-400 via-purple-300 to-purple-200 px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${isVisible
+            ? "opacity-100 scale-100"
+            : "opacity-0 scale-90"
+            }`}
           style={{
             transformOrigin: "center center",
           }}
         >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - placeholder for image */}
-            <div className="hidden lg:block">
-              {/* Placeholder for the scheduling interface image */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
+            {/* Left side - JSON display on desktop, shows below on mobile */}
+            <div className="order-2 lg:order-1 w-full overflow-x-auto">
+              <JsonCodeDisplay
+                data={sampleData}
+                fileName="company-profile.json"
+                className="max-w-full"
+              />
             </div>
 
-            {/* Right side - content */}
-            <div className="space-y-8">
+            {/* Right side - content, shows first on mobile */}
+            <div className="space-y-8 order-1 lg:order-2">
               <div className="space-y-6">
                 <div className="inline-block">
                   <span className="text-sm font-semibold text-purple-900 uppercase tracking-wider">
@@ -55,7 +79,7 @@ export function Analysis() {
                 </div>
 
                 <h2 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
-                  The most complete set of publishing integrations, ever
+                  Figuring out what your company does
                 </h2>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
