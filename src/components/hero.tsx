@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { MessageSquare, Search, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const RedditIcon = ({ className }: { className?: string }) => null
 
@@ -186,8 +187,11 @@ export function Hero() {
                 size="default"
                 className="h-12 px-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold flex-shrink-0"
               >
-                <Search className="w-4 h-4 mr-1" />
-                Discover
+                <Link href="https://form.typeform.com/to/j3zGikNE" className="flex items-center">
+                  <Search className="w-4 h-4 mr-1" />
+                  Discover
+                </Link>
+
               </Button>
             </form>
             <p className="text-sm text-muted-foreground">

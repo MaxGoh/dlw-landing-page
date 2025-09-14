@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
+
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -52,8 +54,10 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]">
-              Book a demo
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]" asChild>
+              <Link href="https://form.typeform.com/to/j3zGikNE">
+                Book a demo
+              </Link>
             </Button>
           </div>
 
@@ -104,8 +108,11 @@ export function Navbar() {
               <Button
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]"
                 onClick={() => setIsMobileMenuOpen(false)}
+                asChild
               >
-                Book a demo
+                <Link href="https://form.typeform.com/to/j3zGikNE">
+                  Book a demo
+                </Link>
               </Button>
             </div>
           </div>

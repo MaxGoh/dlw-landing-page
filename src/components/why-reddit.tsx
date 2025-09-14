@@ -35,9 +35,11 @@ export function WhyReddit() {
             <span className="inline-block">listen on</span>{" "}
             <span className="inline-flex items-center gap-2">
               <span style={{ color: "#FF5700" }}>reddit</span>
-              <img
-                src="https://pngdownload.io/wp-content/uploads/2023/12/Reddit-Logo-emblem-of-the-online-platform-transparent-png-image-jpg.webp"
+              <Image
+                src="/reddit.svg"
                 alt="Reddit logo"
+                width={56}
+                height={56}
                 className="w-12 h-12 lg:w-14 lg:h-14 inline-block bg-transparent"
               />
             </span>
