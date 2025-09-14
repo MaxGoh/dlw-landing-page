@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { MoreHorizontal, ArrowRight, ArrowUp, ArrowDown, MessageSquare, Share, Search, Target, TrendingUp } from "lucide-react"
+import { RecommendedSubreddits } from "@/components/recommended-subreddits"
 
 export function Discovery() {
   const [isVisible, setIsVisible] = useState(false)
@@ -43,26 +44,26 @@ export function Discovery() {
             transformOrigin: "center center",
           }}
         >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left side - content */}
-            <div className="space-y-8">
-              <div className="space-y-6">
+            <div className="space-y-6 lg:space-y-8">
+              <div className="space-y-4 lg:space-y-6">
                 <div className="inline-block">
-                  <span className="text-sm font-semibold text-white/90 uppercase tracking-wider">
+                  <span className="text-xs sm:text-sm font-semibold text-white/90 uppercase tracking-wider">
                     DISCOVERY
                   </span>
                 </div>
 
-                <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
                   Find your audience where they're most active
                 </h2>
 
-                <p className="text-lg text-white/90 leading-relaxed">
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed">
                   Automatically discover relevant subreddits and communities where your target audience discusses their challenges, asks for recommendations, and shares experiences related to your industry.
                 </p>
 
                 <Button
-                  className="bg-white hover:bg-gray-100 text-[#993955] font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2"
+                  className="bg-white hover:bg-gray-100 text-[#993955] font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full inline-flex items-center gap-2 text-sm sm:text-base"
                 >
                   Start discovering
                   <ArrowRight className="w-4 h-4" />
@@ -70,33 +71,33 @@ export function Discovery() {
               </div>
 
               {/* Feature list */}
-              <div className="space-y-4">
+              <div className="space-y-3 lg:space-y-4">
                 <div className="flex items-start gap-3">
                   <Search className="w-5 h-5 text-white mt-1 flex-shrink-0" />
-                  <p className="text-white/90">
+                  <p className="text-sm sm:text-base text-white/90">
                     AI-powered subreddit discovery based on your business domain
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Target className="w-5 h-5 text-white mt-1 flex-shrink-0" />
-                  <p className="text-white/90">
+                  <p className="text-sm sm:text-base text-white/90">
                     Identify high-intent keywords and phrases your audience uses
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-white mt-1 flex-shrink-0" />
-                  <p className="text-white/90">
+                  <p className="text-sm sm:text-base text-white/90">
                     Track trending topics and emerging discussions in real-time
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="relative space-y-4">
-              <div className="space-y-6">
-              </div>
+            {/* Right side - RecommendedSubreddits */}
+            <div className="w-full lg:relative space-y-4">
+              <RecommendedSubreddits />
             </div>
           </div>
         </div>
