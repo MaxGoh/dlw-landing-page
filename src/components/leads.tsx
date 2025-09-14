@@ -1,38 +1,39 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, UserCheck, TrendingUp, DollarSign } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, UserCheck, TrendingUp, DollarSign } from "lucide-react";
 
 export function Leads() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
-    )
+      { threshold: 0.2 },
+    );
 
-    const element = document.getElementById("leads-section")
+    const element = document.getElementById("leads-section");
     if (element) {
-      observer.observe(element)
+      observer.observe(element);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section id="leads-section" className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section
+      id="leads-section"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
-        <div 
+        <div
           className={`relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#E9ECF5] via-[#E9ECF5]/90 to-[#E9ECF5]/80 px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${
-            isVisible 
-              ? "opacity-100 scale-100" 
-              : "opacity-0 scale-90"
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
           }`}
           style={{
             transformOrigin: "center center",
@@ -53,12 +54,13 @@ export function Leads() {
                 </h2>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Transform Reddit discussions into a predictable pipeline of warm leads. Our AI identifies buying signals and helps you connect with prospects when they're actively looking for solutions.
+                  Transform Reddit discussions into a predictable pipeline of
+                  warm leads. Our AI identifies buying signals and helps you
+                  connect with prospects when they're actively looking for
+                  solutions.
                 </p>
 
-                <Button
-                  className="bg-[#993955] hover:bg-[#993955]/90 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2"
-                >
+                <Button className="bg-[#993955] hover:bg-[#993955]/90 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
                   Generate leads
                   <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -97,5 +99,5 @@ export function Leads() {
         </div>
       </div>
     </section>
-  )
+  );
 }

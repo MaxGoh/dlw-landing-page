@@ -1,60 +1,59 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { JsonCodeDisplay } from "@/components/json-code-display"
-import { ArrowRight, Calendar, Wand2, CalendarDays } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { JsonCodeDisplay } from "@/components/json-code-display";
+import { ArrowRight, Calendar, Wand2, CalendarDays } from "lucide-react";
 
 export function Analysis() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
-    )
+      { threshold: 0.2 },
+    );
 
-    const element = document.getElementById("analysis-section")
+    const element = document.getElementById("analysis-section");
     if (element) {
-      observer.observe(element)
+      observer.observe(element);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const sampleData = {
-    "company": "Do Less Work",
-    "tagline": "Listen to what actually matters",
-    "product": "AI-powered Reddit social listening platform",
-    "core_features": [
+    company: "Do Less Work",
+    tagline: "Listen to what actually matters",
+    product: "AI-powered Reddit social listening platform",
+    core_features: [
       "Auto-discovers subreddits where your customers discuss pain points",
       "Converts 'looking for recommendations' posts into qualified leads",
       "AI-crafted authentic Reddit responses",
       "Lead scoring with CRM integration",
-      "ROI and conversion tracking"
+      "ROI and conversion tracking",
     ],
-    "target": "B2B SaaS companies and marketers",
-    "pricing": {
-      "free_tier": "Available",
-      "trial": "30 days",
-      "paid_tiers": "Custom pricing"
+    target: "B2B SaaS companies and marketers",
+    pricing: {
+      free_tier: "Available",
+      trial: "30 days",
+      paid_tiers: "Custom pricing",
     },
-    "key_metric": "1.2B monthly Reddit users with 50M+ posts/month",
-  }
+    key_metric: "1.2B monthly Reddit users with 50M+ posts/month",
+  };
 
   return (
     <section id="analysis-section" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Purple gradient background container with rounded corners */}
         <div
-          className={`relative rounded-3xl bg-gradient-to-br from-purple-400 via-purple-300 to-purple-200 px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${isVisible
-            ? "opacity-100 scale-100"
-            : "opacity-0 scale-90"
-            }`}
+          className={`relative rounded-3xl bg-gradient-to-br from-purple-400 via-purple-300 to-purple-200 px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          }`}
           style={{
             transformOrigin: "center center",
           }}
@@ -83,12 +82,12 @@ export function Analysis() {
                 </h2>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Schedule your content to the most popular platforms including Facebook, Instagram, TikTok, LinkedIn, Threads, Bluesky, YouTube Shorts, Pinterest, Google Business, Mastodon and X.
+                  Schedule your content to the most popular platforms including
+                  Facebook, Instagram, TikTok, LinkedIn, Threads, Bluesky,
+                  YouTube Shorts, Pinterest, Google Business, Mastodon and X.
                 </p>
 
-                <Button
-                  className="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2"
-                >
+                <Button className="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
                   Learn more
                   <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -99,21 +98,24 @@ export function Analysis() {
                 <div className="flex items-start gap-3">
                   <Calendar className="w-5 h-5 text-purple-900 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    Auto-publish your content or get a notification when it's time to post
+                    Auto-publish your content or get a notification when it's
+                    time to post
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Wand2 className="w-5 h-5 text-purple-900 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    Magically customize and repurpose your post for each platform
+                    Magically customize and repurpose your post for each
+                    platform
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CalendarDays className="w-5 h-5 text-purple-900 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    See everything you have scheduled in a calendar or queue view
+                    See everything you have scheduled in a calendar or queue
+                    view
                   </p>
                 </div>
               </div>
@@ -122,5 +124,5 @@ export function Analysis() {
         </div>
       </div>
     </section>
-  )
+  );
 }

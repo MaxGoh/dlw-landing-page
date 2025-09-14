@@ -1,14 +1,13 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <nav className="w-full bg-background">
@@ -58,7 +57,10 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]" asChild>
+            <Button
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]"
+              asChild
+            >
               <Link href="https://form.typeform.com/to/j3zGikNE">
                 Book a demo
               </Link>
@@ -123,5 +125,5 @@ export function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

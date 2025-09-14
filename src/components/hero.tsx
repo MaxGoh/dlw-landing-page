@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { MessageSquare, Search, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { MessageSquare, Search, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
-const RedditIcon = ({ className }: { className?: string }) => null
+const RedditIcon = ({ className }: { className?: string }) => null;
 
 const PlatformLogos = () => (
   <div className="flex flex-wrap items-center gap-4">
@@ -33,9 +33,19 @@ const PlatformLogos = () => (
     </svg>
 
     {/* Instagram */}
-    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="url(#instagram-gradient)">
+    <svg
+      className="w-6 h-6"
+      viewBox="0 0 24 24"
+      fill="url(#instagram-gradient)"
+    >
       <defs>
-        <linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient
+          id="instagram-gradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
           <stop offset="0%" stopColor="#833AB4" />
           <stop offset="50%" stopColor="#FD1D1D" />
           <stop offset="100%" stopColor="#FCB045" />
@@ -59,79 +69,88 @@ const PlatformLogos = () => (
       <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.018-.276.037-.415.056 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z" />
     </svg>
   </div>
-)
+);
 
 export function Hero() {
-  const [websiteUrl, setWebsiteUrl] = useState("")
-  const [urlError, setUrlError] = useState("")
-  const [placeholderText, setPlaceholderText] = useState("")
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isTyping, setIsTyping] = useState(true)
+  const [websiteUrl, setWebsiteUrl] = useState("");
+  const [urlError, setUrlError] = useState("");
+  const [placeholderText, setPlaceholderText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
 
-  const websiteExamples = ["tesla.com", "uber.com", "foodpanda.com", "spotify.com", "airbnb.com", "shopify.com"]
+  const websiteExamples = [
+    "tesla.com",
+    "uber.com",
+    "foodpanda.com",
+    "spotify.com",
+    "airbnb.com",
+    "shopify.com",
+  ];
 
   useEffect(() => {
-    const currentWebsite = websiteExamples[currentIndex]
-    let timeoutId: NodeJS.Timeout
+    const currentWebsite = websiteExamples[currentIndex];
+    let timeoutId: NodeJS.Timeout;
 
     if (isTyping) {
       if (placeholderText.length < currentWebsite.length) {
         timeoutId = setTimeout(() => {
-          setPlaceholderText(currentWebsite.slice(0, placeholderText.length + 1))
-        }, 100)
+          setPlaceholderText(
+            currentWebsite.slice(0, placeholderText.length + 1),
+          );
+        }, 100);
       } else {
         timeoutId = setTimeout(() => {
-          setIsTyping(false)
-        }, 2000)
+          setIsTyping(false);
+        }, 2000);
       }
     } else {
       if (placeholderText.length > 0) {
         timeoutId = setTimeout(() => {
-          setPlaceholderText(placeholderText.slice(0, -1))
-        }, 50)
+          setPlaceholderText(placeholderText.slice(0, -1));
+        }, 50);
       } else {
-        setCurrentIndex((prev) => (prev + 1) % websiteExamples.length)
-        setIsTyping(true)
+        setCurrentIndex((prev) => (prev + 1) % websiteExamples.length);
+        setIsTyping(true);
       }
     }
 
-    return () => clearTimeout(timeoutId)
-  }, [placeholderText, currentIndex, isTyping, websiteExamples])
+    return () => clearTimeout(timeoutId);
+  }, [placeholderText, currentIndex, isTyping, websiteExamples]);
 
   const validateUrl = (url: string) => {
-    if (!url) return "Please enter a website URL"
+    if (!url) return "Please enter a website URL";
 
     try {
-      const urlObj = new URL(url.startsWith("http") ? url : `https://${url}`)
+      const urlObj = new URL(url.startsWith("http") ? url : `https://${url}`);
       if (!urlObj.hostname.includes(".")) {
-        return "Please enter a valid website URL"
+        return "Please enter a valid website URL";
       }
-      return ""
+      return "";
     } catch {
-      return "Please enter a valid website URL"
+      return "Please enter a valid website URL";
     }
-  }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const error = validateUrl(websiteUrl)
+    e.preventDefault();
+    const error = validateUrl(websiteUrl);
     if (error) {
-      setUrlError(error)
-      return
+      setUrlError(error);
+      return;
     }
-    setUrlError("")
-    console.log("Finding subreddits for:", websiteUrl)
+    setUrlError("");
+    console.log("Finding subreddits for:", websiteUrl);
     // TODO: Implement subreddit discovery logic
-  }
+  };
 
   const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setWebsiteUrl(value)
+    const value = e.target.value;
+    setWebsiteUrl(value);
     if (urlError && value) {
-      const error = validateUrl(value)
-      if (!error) setUrlError("")
+      const error = validateUrl(value);
+      if (!error) setUrlError("");
     }
-  }
+  };
 
   return (
     <section className="hero-pattern flex items-center justify-center px-4 py-12">
@@ -145,8 +164,12 @@ export function Hero() {
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-secondary text-secondary transition-all duration-200 hover:scale-105 group font-medium bg-white"
               >
                 <div className="flex items-center gap-2">
-                  <span className="px-2 py-1 text-xs font-bold bg-secondary text-white rounded-full">New</span>
-                  <span className="text-secondary text-xs font-bold">Do Less Work 1.0 is here </span>
+                  <span className="px-2 py-1 text-xs font-bold bg-secondary text-white rounded-full">
+                    New
+                  </span>
+                  <span className="text-secondary text-xs font-bold">
+                    Do Less Work 1.0 is here{" "}
+                  </span>
                 </div>
                 <div className="w-6 h-6 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                   <ArrowRight className="text-white flex-row w-4 h-4" />
@@ -162,15 +185,19 @@ export function Hero() {
             <p className="text-xl text-muted-foreground leading-relaxed text-pretty font-[family-name:var(--font-open-sans)] flex items-start gap-3 justify-center">
               <RedditIcon className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
               <span>
-                Stop missing 50+ buyer conversations daily on Reddit. Turn 'looking for recommendations' posts into
-                qualified leads automatically.
+                Stop missing 50+ buyer conversations daily on Reddit. Turn
+                'looking for recommendations' posts into qualified leads
+                automatically.
               </span>
             </p>
           </div>
 
           {/* CTA Form */}
           <div className="space-y-4">
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row gap-3 w-full"
+            >
               <div className="flex-1">
                 <Input
                   type="text"
@@ -180,42 +207,50 @@ export function Hero() {
                   className={`h-12 text-base bg-white border-2 border-border/50 focus-visible:border-primary ${urlError ? "border-destructive focus-visible:ring-destructive" : ""}`}
                   required
                 />
-                {urlError && <p className="text-sm text-destructive mt-1">{urlError}</p>}
+                {urlError && (
+                  <p className="text-sm text-destructive mt-1">{urlError}</p>
+                )}
               </div>
               <Button
                 type="submit"
                 size="default"
                 className="h-12 px-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold flex-shrink-0"
               >
-                <Link href="https://form.typeform.com/to/j3zGikNE" className="flex items-center">
+                <Link
+                  href="https://form.typeform.com/to/j3zGikNE"
+                  className="flex items-center"
+                >
                   <Search className="w-4 h-4 mr-1" />
                   Discover
                 </Link>
-
               </Button>
             </form>
             <p className="text-sm text-muted-foreground">
-              We'll analyze your website to find the best subreddits where your customers are discussing their pain
-              points.
+              We'll analyze your website to find the best subreddits where your
+              customers are discussing their pain points.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-primary/20 shadow-sm justify-center">
               <div className="relative">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                 <div className="absolute inset-0 w-2 h-2 bg-primary rounded-full animate-ping opacity-75"></div>
               </div>
-              <span className="text-sm text-primary font-bold">Join 50+ businesses listening to what matters</span>
+              <span className="text-sm text-primary font-bold">
+                Join 50+ businesses listening to what matters
+              </span>
             </div>
           </div>
 
           {/* Supported Platforms */}
           <div className="flex items-center gap-8 pt-4 justify-center">
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-foreground">Supported Platforms </h4>
+              <h4 className="text-sm font-semibold text-foreground">
+                Supported Platforms{" "}
+              </h4>
               <PlatformLogos />
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

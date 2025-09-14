@@ -1,38 +1,39 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Ear, Bell, Filter } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Ear, Bell, Filter } from "lucide-react";
 
 export function Listen() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
-    )
+      { threshold: 0.2 },
+    );
 
-    const element = document.getElementById("listen-section")
+    const element = document.getElementById("listen-section");
     if (element) {
-      observer.observe(element)
+      observer.observe(element);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section id="listen-section" className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section
+      id="listen-section"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
-        <div 
+        <div
           className={`relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#E9ECF5] via-[#E9ECF5]/90 to-[#E9ECF5]/80 px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${
-            isVisible 
-              ? "opacity-100 scale-100" 
-              : "opacity-0 scale-90"
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
           }`}
           style={{
             transformOrigin: "center center",
@@ -58,12 +59,12 @@ export function Listen() {
                 </h2>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Monitor mentions, track sentiment, and stay informed about what people are saying. Get real-time alerts when high-value conversations happen so you can respond at the perfect moment.
+                  Monitor mentions, track sentiment, and stay informed about
+                  what people are saying. Get real-time alerts when high-value
+                  conversations happen so you can respond at the perfect moment.
                 </p>
 
-                <Button
-                  className="bg-[#993955] hover:bg-[#993955]/90 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2"
-                >
+                <Button className="bg-[#993955] hover:bg-[#993955]/90 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
                   Start listening
                   <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -97,5 +98,5 @@ export function Listen() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Image from "next/image"
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function WhyReddit() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
       { threshold: 0.3 },
-    )
+    );
 
-    const element = document.getElementById("why-reddit-section")
+    const element = document.getElementById("why-reddit-section");
     if (element) {
-      observer.observe(element)
+      observer.observe(element);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="why-reddit-section" className="py-20 px-4">
@@ -46,12 +46,14 @@ export function WhyReddit() {
           </h2>
 
           <p className="text-xl lg:text-2xl text-secondary/80 leading-relaxed max-w-3xl mx-auto">
-            Reddit has <span className="font-bold text-primary">1.2B</span> monthly active users, with over{" "}
-            <span className="font-bold text-primary">50M</span> posts being published monthly. Within these threads
-            contains gold mines of conversations, insights, feedback and opportunities for engagement.
+            Reddit has <span className="font-bold text-primary">1.2B</span>{" "}
+            monthly active users, with over{" "}
+            <span className="font-bold text-primary">50M</span> posts being
+            published monthly. Within these threads contains gold mines of
+            conversations, insights, feedback and opportunities for engagement.
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }
