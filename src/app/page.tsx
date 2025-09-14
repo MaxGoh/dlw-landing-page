@@ -7,6 +7,7 @@ import { Engage } from "@/components/engage"
 import { GenerateBacklink } from "@/components/generate-backlink"
 import { Leads } from "@/components/leads"
 import { Navbar } from "@/components/navbar"
+import { PricingSection } from "@/components/pricing"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Engage />
       <GenerateBacklink />
       <Leads />
+      <PricingSection />
     </main>
   );
 }
