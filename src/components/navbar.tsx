@@ -11,45 +11,45 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="w-full">
+    <nav className="w-full bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-2">
                 <Image
                   src="/dlw-logo.svg"
                   alt="DLW Logo"
                   width={80}
                   height={80}
                 />
-              </div>
+              </Link>
             </div>
           </div>
 
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-baseline space-x-8">
               <a
-                href="#"
+                href="/product"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
               >
                 Product
               </a>
               <a
-                href="#"
+                href="/use-cases"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
               >
                 Use Cases
               </a>
               <a
-                href="#"
+                href="/pricing"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
               >
                 Pricing
               </a>
               <a
-                href="#"
+                href="/blog"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
               >
                 Blog
@@ -79,7 +79,7 @@ export function Navbar() {
 
       {isMobileMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg border-t">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-background shadow-lg border-t">
             <a
               href="#"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
