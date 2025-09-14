@@ -27,8 +27,8 @@ export function Analysis() {
   }, [])
 
   const sampleData = {
-    "company": "DoLessWork.ai",
-    "tagline": "Stop missing 50+ buyer conversations daily on Reddit",
+    "company": "Do Less Work",
+    "tagline": "Listen to what actually matters",
     "product": "AI-powered Reddit social listening platform",
     "core_features": [
       "Auto-discovers subreddits where your customers discuss pain points",
