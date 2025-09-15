@@ -55,7 +55,7 @@ export function JsonCodeDisplay({
 
   return (
     <div
-      className={`bg-white rounded-lg shadow-lg overflow-hidden ${className}`}
+      className={`bg-white rounded-lg shadow-xl overflow-hidden ${className}`}
     >
       <div className="flex items-center px-4 sm:px-6 py-3 border-b border-gray-200 bg-gray-50">
         <span className="text-blue-500 mr-2">{"{}"}</span>
