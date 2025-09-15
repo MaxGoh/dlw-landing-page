@@ -107,7 +107,7 @@ export function Hero() {
     "coca-colacompany.com",
     "pepsico.com",
     "adobe.com",
-    "oracle.com"
+    "oracle.com",
   ];
 
   useEffect(() => {
@@ -200,15 +200,20 @@ export function Hero() {
           {/* Main Headline & Description */}
           <div className="space-y-8 lg:space-y-10 animate-fadeInUp animation-delay-100">
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-balance text-secondary font-black tracking-tight">
-              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">Listen</span>{" "}
+              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                Listen
+              </span>{" "}
               <span className="inline-block">to what</span>
               <br className="hidden lg:block" />
               <span className="inline-block">actually</span>{" "}
-              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">matters</span>
+              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                matters
+              </span>
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-balance">
-              Isolate what matters. Filter the noise. Drive traffic, build leads and authority for your business across social platforms.
+              Isolate what matters. Filter the noise. Drive traffic, build leads
+              and authority for your business across social platforms.
             </p>
           </div>
 
@@ -228,7 +233,9 @@ export function Hero() {
                   required
                 />
                 {urlError && (
-                  <p className="text-sm text-destructive mt-2 text-left">{urlError}</p>
+                  <p className="text-sm text-destructive mt-2 text-left">
+                    {urlError}
+                  </p>
                 )}
               </div>
               <Button
@@ -247,7 +254,8 @@ export function Hero() {
             </form>
 
             <p className="text-sm lg:text-base text-muted-foreground max-w-lg mx-auto">
-              We'll analyze your business to build a profile of your target audience and identify the best communities to engage with them.
+              We'll analyze your business to build a profile of your target
+              audience and identify the best communities to engage with them.
             </p>
 
             {/* Trust Badge */}
@@ -265,16 +273,29 @@ export function Hero() {
           {/* Stats Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto pt-8 animate-fadeInUp animation-delay-400">
             <div className="text-center space-y-2">
-              <div className="text-3xl lg:text-4xl font-black text-primary">100K+</div>
-              <div className="text-sm lg:text-base text-muted-foreground">Subreddits Indexed</div>
+              <div className="text-3xl lg:text-4xl font-black text-primary">
+                100K+
+              </div>
+              <div className="text-sm lg:text-base text-muted-foreground">
+                Subreddits Indexed
+              </div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl lg:text-4xl font-black text-primary">10K+</div>
-              <div className="text-sm lg:text-base text-muted-foreground"> Posts Analyzed</div>
+              <div className="text-3xl lg:text-4xl font-black text-primary">
+                10K+
+              </div>
+              <div className="text-sm lg:text-base text-muted-foreground">
+                {" "}
+                Posts Analyzed
+              </div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl lg:text-4xl font-black text-primary">24/7</div>
-              <div className="text-sm lg:text-base text-muted-foreground">Active Monitoring</div>
+              <div className="text-3xl lg:text-4xl font-black text-primary">
+                24/7
+              </div>
+              <div className="text-sm lg:text-base text-muted-foreground">
+                Active Monitoring
+              </div>
             </div>
           </div>
         </div>

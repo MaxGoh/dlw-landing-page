@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Link2, Zap, BarChart3 } from "lucide-react";
+import { RedditPost } from "@/components/reddit-post";
+import { RedditReply } from "@/components/reddit-reply";
 
 export function GenerateBacklink() {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,13 +42,25 @@ export function GenerateBacklink() {
           }}
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - placeholder for image */}
-            <div className="hidden lg:block order-1 lg:order-2">
-              {/* Placeholder for backlink generation interface */}
+            {/* Reddit post example with AI reply - visible on all screens */}
+            <div className="order-2 lg:order-2">
+              <div className="space-y-0">
+                <RedditPost
+                  subreddit="r/marketing"
+                  author="u/marketingpro"
+                  timeAgo="1d ago"
+                  title="Reddit is an untapped goldmine for B2B research"
+                  content="I've been lurking in industry subreddits and the insights are incredible. People share their real problems, not what they think you want to hear. Wish there was a way to systematically track these conversations..."
+                  upvotes={156}
+                  comments={67}
+                  companyRelevance={90}
+                />
+                <RedditReply isVisible={isVisible} autoStart={true} />
+              </div>
             </div>
 
-            {/* Right side - content */}
-            <div className="space-y-8 order-2 lg:order-1">
+            {/* Content - shown first on mobile */}
+            <div className="space-y-8 order-1 lg:order-1">
               <div className="space-y-6">
                 <div className="inline-block">
                   <span className="text-sm font-semibold text-white/90 uppercase tracking-wider">

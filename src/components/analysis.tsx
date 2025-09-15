@@ -51,8 +51,9 @@ export function Analysis() {
       <div className="max-w-7xl mx-auto">
         {/* Purple gradient background container with rounded corners */}
         <div
-          className={`relative rounded-3xl px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
+          className={`relative rounded-3xl px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          }`}
           style={{
             transformOrigin: "center center",
           }}
