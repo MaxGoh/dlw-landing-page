@@ -1,5 +1,4 @@
 import { Hero } from "@/components/hero";
-import { Stats } from "@/components/stats";
 import { WhyReddit } from "@/components/why-reddit";
 import { Analysis } from "@/components/analysis";
 import { Discovery } from "@/components/discovery";
@@ -11,7 +10,6 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-background">
       <Hero />
-      <Stats />
       <WhyReddit />
       <Analysis />
       <Discovery />

@@ -79,12 +79,98 @@ export function Hero() {
   const [isTyping, setIsTyping] = useState(true);
 
   const websiteExamples = [
-    "tesla.com",
-    "uber.com",
-    "foodpanda.com",
-    "spotify.com",
-    "airbnb.com",
-    "shopify.com",
+    "wsj.com",
+    "bloomberg.com",
+    "ft.com",
+    "economist.com",
+    "reuters.com",
+    "hbr.org",
+    "forbes.com",
+    "fortune.com",
+    "cnbc.com",
+    "businessinsider.com",
+    "marketwatch.com",
+    "axios.com",
+    "qz.com",
+    "asia.nikkei.com",
+    "finance.yahoo.com",
+    "investopedia.com",
+    "seekingalpha.com",
+    "morningstar.com",
+    "barrons.com",
+    "fool.com",
+    "techcrunch.com",
+    "wired.com",
+    "theverge.com",
+    "stratechery.com",
+    "theinformation.com",
+    "technologyreview.com",
+    "arstechnica.com",
+    "news.ycombinator.com",
+    "producthunt.com",
+    "restofworld.org",
+    "inc.com",
+    "entrepreneur.com",
+    "fastcompany.com",
+    "review.firstround.com",
+    "saastr.com",
+    "indiehackers.com",
+    "crunchbase.com",
+    "ycombinator.com",
+    "startupgrind.com",
+    "angellist.com",
+    "mckinsey.com",
+    "bcg.com",
+    "bain.com",
+    "strategy-business.com",
+    "brenebrown.com",
+    "a16z.com",
+    "sequoiacap.com",
+    "avc.com",
+    "pitchbook.com",
+    "cbinsights.com",
+    "strictlyvc.com",
+    "lsvp.com",
+    "mattturck.com",
+    "nfx.com",
+    "tech.eu",
+    "hubspot.com",
+    "moz.com",
+    "searchengineland.com",
+    "contentmarketinginstitute.com",
+    "marketingprofs.com",
+    "adweek.com",
+    "adage.com",
+    "neilpatel.com",
+    "saleshacker.com",
+    "gartner.com",
+    "weforum.org",
+    "cfr.org",
+    "piie.com",
+    "foreignaffairs.com",
+    "project-syndicate.org",
+    "ourworldindata.org",
+    "pewresearch.org",
+    "statista.com",
+    "fivethirtyeight.com",
+    "kdnuggets.com",
+    "towardsdatascience.com",
+    "kaggle.com",
+    "flowingdata.com",
+    "lifehacker.com",
+    "zapier.com",
+    "notion.so",
+    "slack.com",
+    "trello.com",
+    "github.com",
+    "stackoverflow.com",
+    "dribbble.com",
+    "behance.net",
+    "ted.com",
+    "coursera.org",
+    "edx.org",
+    "udemy.com",
+    "linkedin.com"
   ];
 
   useEffect(() => {
@@ -153,90 +239,115 @@ export function Hero() {
   };
 
   return (
-    <section className="hero-pattern flex items-center justify-center px-4 py-12">
-      <div className="max-w-4xl mx-auto">
+    <section className="hero-pattern relative min-h-screen flex items-center justify-center px-4 py-20 lg:py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full">
         {/* Hero Content */}
-        <div className="space-y-8 text-center">
-          <div className="space-y-6">
-            {/* <div className="flex justify-center">
-              <a
-                href="/blog"
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-secondary text-secondary transition-all duration-200 hover:scale-105 group font-medium bg-white"
-              >
-                <div className="flex items-center gap-2">
-                  <span className="px-2 py-1 text-xs font-bold bg-secondary text-white rounded-full">
-                    New
-                  </span>
-                  <span className="text-secondary text-xs font-bold">
-                    Do Less Work 1.0 is here{" "}
-                  </span>
-                </div>
-                <div className="w-6 h-6 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                  <ArrowRight className="text-white flex-row w-4 h-4" />
-                </div>
-              </a>
-            </div> */}
-
-            <h1 className="text-5xl lg:text-6xl leading-tight text-balance text-secondary font-black">
-              <span className="text-primary">Listen</span> to what actually{" "}
-              <span className="text-primary">matters</span>
+        <div className="space-y-12 lg:space-y-16 text-center">
+          {/* Announcement Badge */}
+          {/* <div className="flex justify-center animate-fadeInUp">
+            <a
+              href="/blog"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-primary/15 group"
+            >
+              <span className="flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              <span className="text-sm font-semibold text-primary">
+                Do Less Work 1.0 is here
+              </span>
+              <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+ */}
+          {/* Main Headline & Description */}
+          <div className="space-y-8 lg:space-y-10 animate-fadeInUp animation-delay-100">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-balance text-secondary font-black tracking-tight">
+              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">Listen</span>{" "}
+              <span className="inline-block">to what</span>
+              <br className="hidden lg:block" />
+              <span className="inline-block">actually</span>{" "}
+              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">matters</span>
             </h1>
 
-            <p className="text-xl text-muted-foreground leading-relaxed text-pretty font-[family-name:var(--font-open-sans)] flex items-start gap-3 justify-center">
-              <RedditIcon className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
-              <span>
-                Isolate what matters. Filter the noise. Drive traffic, build leads and authority for your business.
-              </span>
+            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-balance">
+              Isolate what matters. Filter the noise. Drive traffic, build leads and authority for your business across social platforms.
             </p>
           </div>
 
-          {/* CTA Form */}
-          <div className="space-y-4">
+          {/* CTA Form Section */}
+          <div className="space-y-6 max-w-2xl mx-auto animate-fadeInUp animation-delay-300">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3 w-full"
+              className="flex flex-col sm:flex-row gap-4 w-full"
             >
-              <div className="flex-1">
+              <div className="flex-1 relative">
                 <Input
                   type="text"
-                  placeholder={placeholderText} // removed fallback "Enter your website URL" text
+                  placeholder={placeholderText}
                   value={websiteUrl}
                   onChange={handleUrlChange}
-                  className={`h-12 text-base bg-white border-2 border-border/50 focus-visible:border-primary ${urlError ? "border-destructive focus-visible:ring-destructive" : ""}`}
+                  className={`h-14 lg:h-16 text-base lg:text-lg px-6 bg-white/80 backdrop-blur-sm border-2 border-border/50 focus-visible:border-primary shadow-lg hover:shadow-xl transition-shadow ${urlError ? "border-destructive focus-visible:ring-destructive" : ""}`}
                   required
                 />
                 {urlError && (
-                  <p className="text-sm text-destructive mt-1">{urlError}</p>
+                  <p className="text-sm text-destructive mt-2 text-left">{urlError}</p>
                 )}
               </div>
               <Button
                 type="submit"
                 size="default"
-                className="h-12 px-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold flex-shrink-0"
+                className="h-14 lg:h-16 px-8 lg:px-10 bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white font-bold text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <Link
                   href="https://form.typeform.com/to/j3zGikNE"
-                  className="flex items-center"
+                  className="flex items-center gap-2"
                 >
-                  <Search className="w-4 h-4 mr-1" />
-                  Discover
+                  <Search className="w-5 h-5" />
+                  <span>Discover Now</span>
                 </Link>
               </Button>
             </form>
-            <p className="text-sm text-muted-foreground">
-              We'll analyze your business to build up a profile of your target audience and the best subreddits to engage with them.
+
+            <p className="text-sm lg:text-base text-muted-foreground max-w-lg mx-auto">
+              We'll analyze your business to build a profile of your target audience and identify the best communities to engage with them.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-primary/20 shadow-sm justify-center">
+
+            {/* Trust Badge */}
+            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/80 backdrop-blur-sm border border-primary/20 shadow-md">
               <div className="relative">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                <div className="absolute inset-0 w-2 h-2 bg-primary rounded-full animate-ping opacity-75"></div>
+                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                <div className="absolute inset-0 w-3 h-3 bg-blue-500 rounded-full animate-ping opacity-75"></div>
               </div>
-              <span className="text-sm text-primary font-bold">
+              <span className="text-sm lg:text-base font-semibold text-secondary">
                 Join 50+ businesses listening to what matters
               </span>
             </div>
           </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto pt-8 animate-fadeInUp animation-delay-400">
+            <div className="text-center space-y-2">
+              <div className="text-3xl lg:text-4xl font-black text-primary">100K+</div>
+              <div className="text-sm lg:text-base text-muted-foreground">Subreddits Indexed</div>
+            </div>
+            <div className="text-center space-y-2">
+              <div className="text-3xl lg:text-4xl font-black text-primary">10K+</div>
+              <div className="text-sm lg:text-base text-muted-foreground"> Posts Analyzed</div>
+            </div>
+            <div className="text-center space-y-2">
+              <div className="text-3xl lg:text-4xl font-black text-primary">24/7</div>
+              <div className="text-sm lg:text-base text-muted-foreground">Active Monitoring</div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      {/* Background Decorations */}
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-r from-primary/5 to-blue-400/5 rounded-full blur-3xl"></div>
       </div>
     </section>
   );
