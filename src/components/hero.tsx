@@ -176,7 +176,7 @@ export function Hero() {
   };
 
   return (
-    <section className="hero-pattern relative min-h-screen flex items-center justify-center px-4 py-20 lg:py-32 overflow-hidden">
+    <section className="hero-pattern relative min-h-screen flex items-center justify-center px-4 py-8 lg:py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         {/* Hero Content */}
         <div className="space-y-12 lg:space-y-16 text-center">
@@ -203,7 +203,7 @@ export function Hero() {
               <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
                 Listen
               </span>{" "}
-              <span className="inline-block">to what</span>
+              <span className="inline-block">to what</span>{" "}
               <br className="hidden lg:block" />
               <span className="inline-block">actually</span>{" "}
               <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
