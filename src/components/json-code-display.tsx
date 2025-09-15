@@ -62,7 +62,7 @@ export function JsonCodeDisplay({
         <span className="text-sm font-medium text-gray-700">{fileName}</span>
       </div>
 
-      <div className="p-4 sm:p-6 bg-gray-50 overflow-x-auto">
+      <div className="p-4 sm:p-6 bg-white overflow-x-auto">
         <pre className="font-mono text-xs sm:text-sm leading-relaxed text-left min-w-fit">
           <code className="block">{renderJsonWithHighlight(jsonString)}</code>
         </pre>
