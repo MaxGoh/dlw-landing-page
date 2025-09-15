@@ -8,7 +8,7 @@ import { TimeSaver } from "@/components/time-saver";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <>
       <Hero />
       <WhyReddit />
       <Analysis />
@@ -16,6 +16,6 @@ export default function Page() {
       <Engage />
       <GenerateBacklink />
       <TimeSaver />
-    </main>
+    </>
   );
 }
