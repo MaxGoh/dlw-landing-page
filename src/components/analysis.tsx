@@ -51,9 +51,8 @@ export function Analysis() {
       <div className="max-w-7xl mx-auto">
         {/* Purple gradient background container with rounded corners */}
         <div
-          className={`relative rounded-3xl bg-gradient-to-br from-purple-400 via-purple-300 to-purple-200 px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${
-            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-          }`}
+          className={`relative rounded-3xl px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+            }`}
           style={{
             transformOrigin: "center center",
           }}
@@ -72,7 +71,7 @@ export function Analysis() {
             <div className="space-y-8 order-1 lg:order-2">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="text-sm font-semibold text-purple-900 uppercase tracking-wider">
+                  <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold border-2 border-primary text-primary uppercase tracking-wider">
                     ANALYSIS
                   </span>
                 </div>
@@ -87,16 +86,16 @@ export function Analysis() {
                   YouTube Shorts, Pinterest, Google Business, Mastodon and X.
                 </p>
 
-                <Button className="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
+                {/* <Button className="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
                   Learn more
                   <ArrowRight className="w-4 h-4" />
-                </Button>
+                </Button> */}
               </div>
 
               {/* Feature list */}
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-purple-900 mt-1 flex-shrink-0" />
+                  <Calendar className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
                     Auto-publish your content or get a notification when it's
                     time to post
@@ -104,7 +103,7 @@ export function Analysis() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Wand2 className="w-5 h-5 text-purple-900 mt-1 flex-shrink-0" />
+                  <Wand2 className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
                     Magically customize and repurpose your post for each
                     platform
@@ -112,7 +111,7 @@ export function Analysis() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <CalendarDays className="w-5 h-5 text-purple-900 mt-1 flex-shrink-0" />
+                  <CalendarDays className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
                     See everything you have scheduled in a calendar or queue
                     view

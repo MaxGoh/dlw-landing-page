@@ -9,7 +9,7 @@ import { Leads } from "@/components/leads";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background via-card to-secondary/30">
+    <main className="min-h-screen bg-background">
       <Hero />
       <Stats />
       <WhyReddit />
