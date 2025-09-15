@@ -4,6 +4,7 @@ import "@fontsource-variable/figtree";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-F906F8S345" />}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
