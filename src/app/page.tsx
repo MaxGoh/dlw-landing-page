@@ -4,7 +4,6 @@ import { Analysis } from "@/components/analysis";
 import { Discovery } from "@/components/discovery";
 import { Engage } from "@/components/engage";
 import { GenerateBacklink } from "@/components/generate-backlink";
-import { Leads } from "@/components/leads";
 
 export default function Page() {
   return (
@@ -15,7 +14,6 @@ export default function Page() {
       <Discovery />
       <Engage />
       <GenerateBacklink />
-      <Leads />
     </main>
   );
 }

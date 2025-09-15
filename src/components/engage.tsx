@@ -48,9 +48,8 @@ export function Engage() {
     >
       <div className="max-w-7xl mx-auto">
         <div
-          className={`relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#A4C2A8] via-[#A4C2A8]/90 to-[#A4C2A8]/80 px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${
-            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-          }`}
+          className={`relative overflow-hidden rounded-3xl px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+            }`}
           style={{
             transformOrigin: "center center",
           }}
@@ -60,7 +59,7 @@ export function Engage() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="text-sm font-semibold text-gray-800 uppercase tracking-wider">
+                  <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold border-2 border-primary text-primary uppercase tracking-wider">
                     ENGAGE
                   </span>
                 </div>
@@ -75,10 +74,6 @@ export function Engage() {
                   authentic responses that resonate with the Reddit community.
                 </p>
 
-                <Button className="bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
-                  Start engaging
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
               </div>
 
               {/* Feature list */}
