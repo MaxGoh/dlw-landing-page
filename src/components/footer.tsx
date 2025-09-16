@@ -38,7 +38,7 @@ export function Footer() {
 								</svg>
 							</a>
 							<a
-								href="https://linkedin.com"
+								href="https://www.linkedin.com/company/dolesswork"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-gray-400 hover:text-gray-500"
