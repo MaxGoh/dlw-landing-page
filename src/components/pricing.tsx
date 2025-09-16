@@ -58,7 +58,7 @@ export function PricingSection() {
                         </div>
                         <CardHeader className="text-center pt-8">
                             <CardTitle className="text-2xl font-bold text-foreground">
-                                Pro Tier
+                                Professional
                             </CardTitle>
                             <CardDescription className="text-muted-foreground">
                                 Perfect for growing businesses
