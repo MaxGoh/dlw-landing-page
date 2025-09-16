@@ -43,7 +43,7 @@ export function RecommendedSubreddits() {
   };
 
   return (
-    <div className="bg-gray-100 rounded-xl sm:rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+    <div className="bg-gray-100 rounded-xl sm:rounded-2xl shadow-[0_10px_40px_rgba(59,130,246,0.15)] overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-[0_20px_60px_rgba(59,130,246,0.25)] hover:-translate-y-1">
       <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
         <div className="flex gap-2">
           <div className="w-3 h-3 rounded-full bg-red-500"></div>
