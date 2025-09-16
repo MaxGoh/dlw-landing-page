@@ -113,12 +113,12 @@ export function Hero() {
   };
 
   return (
-    <section className="hero-pattern relative min-h-screen flex items-center justify-center px-4 py-8 lg:py-8 overflow-hidden">
+    <section className="hero-pattern relative min-h-screen flex items-center justify-center px-4 py-16 lg:py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         {/* Hero Content */}
-        <div className="space-y-12 lg:space-y-16 text-center">
+        <div className="space-y-6 lg:space-y-6 text-center">
           {/* Announcement Badge */}
-          {/* <div className="flex justify-center animate-fadeInUp">
+          <div className="flex justify-center animate-fadeInUp">
             <a
               href="/blog"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-primary/15 group"
@@ -128,12 +128,11 @@ export function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
               <span className="text-sm font-semibold text-primary">
-                Do Less Work 1.0 is here
+                Limited Beta Access Available
               </span>
               <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
- */}
           {/* Main Headline & Description */}
           <div className="space-y-8 lg:space-y-10 animate-fadeInUp animation-delay-100">
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-balance text-secondary font-black tracking-tight">
