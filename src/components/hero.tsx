@@ -201,7 +201,7 @@ export function Hero() {
                 <div className="absolute inset-0 w-3 h-3 bg-blue-500 rounded-full animate-ping opacity-75"></div>
               </div>
               <span className="text-sm lg:text-base font-semibold text-secondary">
-                Join 50+ businesses listening to what matters
+                Only 50 beta spots remaining
               </span>
             </div>
           </div>
