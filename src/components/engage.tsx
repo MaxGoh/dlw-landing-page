@@ -104,7 +104,7 @@ export function Engage() {
               <div className="space-y-6">
                 <h3 className="text-xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)]"></h3>
 
-                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform rotate-2 hover:rotate-0 hover:scale-105 shadow-lg">
+                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform rotate-2 hover:rotate-0 hover:scale-105 shadow-lg shadow-blue-200/50">
                   <div className="p-4">
                     {/* Header with subreddit icon and info */}
                     <div className="flex items-center justify-between mb-3">
@@ -159,7 +159,7 @@ export function Engage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform -rotate-1 hover:rotate-0 hover:scale-105 shadow-lg ml-8">
+                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform -rotate-1 hover:rotate-0 hover:scale-105 shadow-lg shadow-blue-200/50 ml-8">
                   <div className="p-4">
                     {/* Header with subreddit icon and info */}
                     <div className="flex items-center justify-between mb-3">
@@ -214,7 +214,7 @@ export function Engage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform rotate-1 hover:rotate-0 hover:scale-105 shadow-lg mr-4">
+                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform rotate-1 hover:rotate-0 hover:scale-105 shadow-lg shadow-blue-200/50 mr-4">
                   <div className="p-4">
                     {/* Header with subreddit icon and info */}
                     <div className="flex items-center justify-between mb-3">

@@ -68,16 +68,14 @@ export function FAQ() {
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${openIndex === index ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
               <div
-                className={`px-6 overflow-hidden transition-all duration-200 ${
-                  openIndex === index ? "py-4" : "max-h-0"
-                }`}
+                className={`px-6 overflow-hidden transition-all duration-200 ${openIndex === index ? "py-4" : "max-h-0"
+                  }`}
               >
                 <p className="text-gray-600 leading-relaxed">
                   {faq.answer}
@@ -92,7 +90,7 @@ export function FAQ() {
             Still have questions?
           </p>
           <a
-            href="mailto:support@dolesswork.com"
+            href="mailto:hello@dolesswork.ai"
             className="inline-flex items-center text-primary font-semibold hover:underline"
           >
             Contact our support team

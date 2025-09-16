@@ -86,10 +86,10 @@ The real magic is in understanding context and timing. Would love to hear more a
         transitionDelay: showReply ? "0ms" : "0ms",
       }}
     >
-      <div className={`bg-white rounded-lg border shadow-sm overflow-hidden transition-all duration-500 ${isTyping
-          ? "border-blue-300 shadow-lg shadow-blue-100/50"
+      <div className={`bg-white rounded-lg border shadow-lg shadow-blue-200/50 overflow-hidden transition-all duration-500 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-300/60 ${isTyping
+          ? "border-blue-300"
           : isComplete
-            ? "border-green-300 shadow-md shadow-green-100/30"
+            ? "border-green-300"
             : "border-gray-200"
         }`}>
         {/* Reply Header */}
