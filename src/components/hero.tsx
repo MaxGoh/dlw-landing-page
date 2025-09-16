@@ -191,7 +191,7 @@ export function Hero() {
 
             <p className="text-sm lg:text-base text-muted-foreground max-w-lg mx-auto">
               We'll analyze your business to build a profile of your target
-              audience and identify the best communities to engage with them.
+              audience and identify the best communities to listen and engage with them.
             </p>
 
             {/* Trust Badge */}

@@ -17,13 +17,15 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2">
-                <Image
-                  src="/dlw-logo.svg"
-                  alt="DLW Logo"
-                  width={80}
-                  height={80}
-                />
+              <Link href="/" className="flex items-center gap-2 group">
+                <div className="transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-1">
+                  <Image
+                    src="/dlw-logo.svg"
+                    alt="DLW Logo"
+                    width={180}
+                    height={140}
+                  />
+                </div>
               </Link>
             </div>
           </div>
