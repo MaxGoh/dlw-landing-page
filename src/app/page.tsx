@@ -5,6 +5,7 @@ import { Discovery } from "@/components/discovery";
 import { Engage } from "@/components/engage";
 import { GenerateBacklink } from "@/components/generate-backlink";
 import { TimeSaver } from "@/components/time-saver";
+import { FAQ } from "@/components/faq";
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <Engage />
       <GenerateBacklink />
       <TimeSaver />
+      <FAQ />
     </>
   );
 }
