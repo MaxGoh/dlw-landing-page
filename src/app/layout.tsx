@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Do Less Work",
-  description: "Listen to what actually matters",
+  title: "Do Less Work | Listen to what actually matters on Reddit",
+  description: "Isolate what matters. Filter the noise. Drive traffic, build authority and gain leads for your business",
 };
 
 export default function RootLayout({

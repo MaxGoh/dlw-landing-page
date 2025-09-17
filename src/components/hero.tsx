@@ -148,8 +148,8 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-balance">
-              Isolate what matters. Filter the noise. Drive traffic, build leads
-              and authority for your business across social platforms.
+              Isolate what matters. Filter the noise. Drive traffic, build authority
+              and gain leads for your business.
             </p>
           </div>
 
