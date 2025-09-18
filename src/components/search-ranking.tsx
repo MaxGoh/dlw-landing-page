@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Link2, Zap, BarChart3, Search, TrendingUp, CheckCircle, Brain } from "lucide-react";
+import Image from "next/image";
 
 export function SearchRanking() {
   const [isVisible, setIsVisible] = useState(false);
@@ -152,9 +153,13 @@ export function SearchRanking() {
                     {/* First Result - Your Product */}
                     <div className="bg-white rounded-lg p-2.5 sm:p-3 border border-gray-200 hover:shadow-md transition-shadow">
                       <div className="flex items-start gap-2">
-                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-white text-xs font-bold">R</span>
-                        </div>
+                        <Image
+                          src="/reddit.svg"
+                          alt="Reddit logo"
+                          width={24}
+                          height={24}
+                          className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
+                        />
                         <div className="flex-1 min-w-0">
                           <div className="text-xs text-gray-600 mb-1">
                             <span className="block sm:inline">Reddit · r/sales</span>
@@ -174,9 +179,13 @@ export function SearchRanking() {
                     {/* Second Result */}
                     <div className="bg-white rounded-lg p-2.5 sm:p-3 border border-gray-200 hover:shadow-md transition-shadow">
                       <div className="flex items-start gap-2">
-                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-white text-xs font-bold">R</span>
-                        </div>
+                        <Image
+                          src="/reddit.svg"
+                          alt="Reddit logo"
+                          width={24}
+                          height={24}
+                          className="w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0"
+                        />
                         <div className="flex-1 min-w-0">
                           <div className="text-xs text-gray-600 mb-1">
                             <span className="block sm:inline">Reddit · r/startups</span>
