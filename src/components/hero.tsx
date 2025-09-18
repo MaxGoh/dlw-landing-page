@@ -5,8 +5,9 @@ import type React from "react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MessageSquare, Search, ArrowRight } from "lucide-react";
+import { MessageSquare, Search, TrendingUp, DollarSign, Clock, MousePointer, Shield, Lightbulb, Zap, ScrollText } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Hero() {
   const [websiteUrl, setWebsiteUrl] = useState("");
@@ -123,32 +124,42 @@ export function Hero() {
               href="/blog"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-primary/15 group"
             >
-              <span className="flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              <span className="px-2 py-0.5 text-xs font-bold bg-primary text-white rounded">
+                NEW
               </span>
               <span className="text-sm font-semibold text-primary">
                 Limited Beta Access Available
               </span>
-              <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
           {/* Main Headline & Description */}
           <div className="space-y-8 lg:space-y-10 animate-fadeInUp animation-delay-100">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-balance text-secondary font-black tracking-tight">
-              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-                Listen
-              </span>{" "}
-              <span className="inline-block">to what</span>{" "}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-balance text-secondary font-black tracking-tight">
+              <Image
+                src="/reddit.svg"
+                alt="Reddit logo"
+                width={56}
+                height={56}
+                className="inline-block w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 mr-2 align-baseline"
+              />
+              <span className="text-[#FF4500]">Reddit</span> intelligence{" "}
+              <br className="md:hidden" />
               <br className="hidden lg:block" />
-              <span className="inline-block">actually</span>{" "}
+              that drives{" "}
               <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-                matters
+                traffic
+              </span>{" "}
+              <br className="md:hidden" />
+              and{" "}
+              <br className="hidden lg:block" />
+              boosts{" "}
+              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                search rankings
               </span>
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-balance">
-              Isolate what matters. Filter the noise. Drive traffic, build authority
+              Isolate what matters. Filter the noise. Drive traffic, build authority, access enhanced insights
               and gain leads for your business.
             </p>
           </div>
@@ -203,35 +214,6 @@ export function Hero() {
               <span className="text-sm lg:text-base font-semibold text-secondary">
                 Only 50 beta spots remaining
               </span>
-            </div>
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto pt-8 animate-fadeInUp animation-delay-400">
-            <div className="text-center space-y-2">
-              <div className="text-3xl lg:text-4xl font-black text-primary">
-                100K+
-              </div>
-              <div className="text-sm lg:text-base text-muted-foreground">
-                Subreddits Indexed
-              </div>
-            </div>
-            <div className="text-center space-y-2">
-              <div className="text-3xl lg:text-4xl font-black text-primary">
-                10K+
-              </div>
-              <div className="text-sm lg:text-base text-muted-foreground">
-                {" "}
-                Posts Analyzed
-              </div>
-            </div>
-            <div className="text-center space-y-2">
-              <div className="text-3xl lg:text-4xl font-black text-primary">
-                24/7
-              </div>
-              <div className="text-sm lg:text-base text-muted-foreground">
-                Active Monitoring
-              </div>
             </div>
           </div>
         </div>

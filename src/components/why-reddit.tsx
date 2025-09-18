@@ -34,7 +34,7 @@ export function WhyReddit() {
             <span className="inline-block">Why social</span>{" "}
             <span className="inline-block">listen on</span>{" "}
             <span className="inline-flex items-center gap-2">
-              <span style={{ color: "#FF5700" }}>reddit</span>
+              <span style={{ color: "#FF5700" }}>Reddit</span>
               <Image
                 src="/reddit.svg"
                 alt="Reddit logo"

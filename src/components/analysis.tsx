@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { JsonCodeDisplay } from "@/components/json-code-display";
-import { ArrowRight, Calendar, Wand2, CalendarDays } from "lucide-react";
+import { ArrowRight, Calendar, Wand2, CalendarDays, Search } from "lucide-react";
 
 export function Analysis() {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,9 +51,8 @@ export function Analysis() {
       <div className="max-w-7xl mx-auto">
         {/* Container */}
         <div
-          className={`relative px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${
-            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-          }`}
+          className={`relative px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+            }`}
           style={{
             transformOrigin: "center center",
           }}
@@ -78,13 +77,15 @@ export function Analysis() {
                 </div>
 
                 <h2 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
-                  Figuring out what your company does
+                  We figure out what your business does.
                 </h2>
 
+                <p className="text-base lg:text-lg font-semibold text-blue-500">
+                  No pre-requisites required
+                </p>
+
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Schedule your content to the most popular platforms including
-                  Facebook, Instagram, TikTok, LinkedIn, Threads, Bluesky,
-                  YouTube Shorts, Pinterest, Google Business, Mastodon and X.
+                  We'll scrape your website to build a profile of your business. We'll then use that profile to identify the best communities to listen and engage with them.
                 </p>
 
                 {/* <Button className="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
@@ -96,26 +97,21 @@ export function Analysis() {
               {/* Feature list */}
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                  <Search className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    Auto-publish your content or get a notification when it's
-                    time to post
+                    One-click analysis of your business
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Wand2 className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    Magically customize and repurpose your post for each
-                    platform
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <CalendarDays className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    See everything you have scheduled in a calendar or queue
-                    view
                   </p>
                 </div>
               </div>
