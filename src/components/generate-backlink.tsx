@@ -31,14 +31,10 @@ export function GenerateBacklink() {
       className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
-        <div
-          className={`relative overflow-hidden rounded-3xl px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
+        <div className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
           style={{
             transformOrigin: "center center",
-          }}
-        >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          }}>
             {/* Content */}
             <div className="space-y-8">
               <div className="space-y-6">
@@ -114,7 +110,7 @@ export function GenerateBacklink() {
               </div>
 
               {/* Tab content */}
-              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg shadow-blue-200/50">
+              <div>
                 {activeTab === "seo" ? (
                   <div className="space-y-3 sm:space-y-4">
                     {/* Google Search Bar */}
@@ -284,7 +280,6 @@ export function GenerateBacklink() {
                   </div>
                 )}
               </div>
-            </div>
           </div>
         </div>
       </div>
