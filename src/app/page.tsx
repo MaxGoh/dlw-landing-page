@@ -6,6 +6,7 @@ import { Engage } from "@/components/engage";
 import { GenerateBacklink } from "@/components/generate-backlink";
 import { TimeSaver } from "@/components/time-saver";
 import { FAQ } from "@/components/faq";
+import { Listen } from "@/components/listen";
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <WhyReddit />
       <Analysis />
       <Discovery />
+      <Listen />
       <Engage />
       <GenerateBacklink />
       <TimeSaver />

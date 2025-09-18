@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { JsonCodeDisplay } from "@/components/json-code-display";
-import { ArrowRight, Calendar, Wand2, CalendarDays, Search } from "lucide-react";
+import { Wand2, Search } from "lucide-react";
 
 export function Analysis() {
   const [isVisible, setIsVisible] = useState(false);
@@ -106,12 +105,7 @@ export function Analysis() {
                 <div className="flex items-start gap-3">
                   <Wand2 className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CalendarDays className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-700">
+                    Learn the best keywords to use for listening and ranking on.
                   </p>
                 </div>
               </div>
