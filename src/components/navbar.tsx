@@ -61,7 +61,7 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center">
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]" asChild>
-              <Link href="https://form.typeform.com/to/j3zGikNE">
+              <Link href="https://form.typeform.com/to/J59frRUQ">
                 Book a demo
               </Link>
             </Button>
@@ -116,7 +116,7 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 asChild
               >
-                <Link href="https://form.typeform.com/to/j3zGikNE">
+                <Link href="https://form.typeform.com/to/J59frRUQ">
                   Book a demo
                 </Link>
               </Button>

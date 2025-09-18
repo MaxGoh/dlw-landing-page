@@ -69,7 +69,7 @@ export function TimeSaver() {
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-10 py-7 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group transform hover:scale-105"
             >
-              <Link href="https://form.typeform.com/to/j3zGikNE" className="flex items-center gap-2">
+              <Link href="https://form.typeform.com/to/J59frRUQ" className="flex items-center gap-2">
                 Book a Demo
                 <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Link>

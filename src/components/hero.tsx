@@ -191,7 +191,7 @@ export function Hero() {
                 className="h-14 lg:h-16 px-8 lg:px-10 bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white font-bold text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <Link
-                  href="https://form.typeform.com/to/j3zGikNE"
+                  href="https://form.typeform.com/to/J59frRUQ"
                   className="flex items-center gap-2"
                 >
                   <Search className="w-5 h-5" />
