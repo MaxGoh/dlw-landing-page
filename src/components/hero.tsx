@@ -121,7 +121,7 @@ export function Hero() {
           {/* Announcement Badge */}
           <div className="flex justify-center animate-fadeInUp">
             <a
-              href="/blog"
+              href="https://form.typeform.com/to/J59frRUQ"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-primary/15 group"
             >
               <span className="px-2 py-0.5 text-xs font-bold bg-primary text-white rounded">
