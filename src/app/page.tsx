@@ -3,7 +3,7 @@ import { WhyReddit } from "@/components/why-reddit";
 import { Analysis } from "@/components/analysis";
 import { Discovery } from "@/components/discovery";
 import { Engage } from "@/components/engage";
-import { GenerateBacklink } from "@/components/generate-backlink";
+import { SearchRanking } from "@/components/search-ranking";
 import { TimeSaver } from "@/components/time-saver";
 import { FAQ } from "@/components/faq";
 import { Listen } from "@/components/listen";
@@ -17,7 +17,7 @@ export default function Page() {
       <Discovery />
       <Listen />
       <Engage />
-      <GenerateBacklink />
+      <SearchRanking />
       <TimeSaver />
       <FAQ />
     </>
