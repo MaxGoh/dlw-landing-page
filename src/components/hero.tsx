@@ -114,7 +114,7 @@ export function Hero() {
   };
 
   return (
-    <section className="hero-pattern relative min-h-screen flex items-center justify-center px-4 py-16 lg:py-16 overflow-hidden">
+    <section className="hero-pattern relative min-h-screen flex items-center justify-center px-4 pt-8 pb-16 lg:py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         {/* Hero Content */}
         <div className="space-y-6 lg:space-y-6 text-center">
