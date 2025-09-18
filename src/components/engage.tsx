@@ -5,21 +5,13 @@ import {
   MessageCircle,
   Users,
   Heart,
-  ArrowUp,
-  ArrowDown,
-  MessageSquare,
-  Share,
-  MoreHorizontal,
 } from "lucide-react";
+import { RedditPost } from "@/components/reddit-post";
+import { RedditReply } from "@/components/reddit-reply";
 
 export function Engage() {
   const [isVisible, setIsVisible] = useState(false);
 
-  const SubredditIcon = ({ letter }: { letter: string }) => (
-    <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">
-      r/{letter}
-    </div>
-  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -99,175 +91,20 @@ export function Engage() {
               </div>
             </div>
 
-            {/* Right side - placeholder for image */}
-            <div className="relative space-y-4">
-              <div className="space-y-6">
-                <h3 className="text-xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)]"></h3>
-
-                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform rotate-2 hover:rotate-0 hover:scale-105 shadow-lg shadow-blue-200/50">
-                  <div className="p-4">
-                    {/* Header with subreddit icon and info */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-2">
-                        <SubredditIcon letter="e" />
-                        <div className="flex items-center gap-1 text-sm text-gray-500">
-                          <span className="font-medium">r/entrepreneur</span>
-                          <span>•</span>
-                          <span>2h ago</span>
-                        </div>
-                      </div>
-                      <MoreHorizontal className="w-5 h-5 text-gray-400" />
-                    </div>
-
-                    {/* Post title */}
-                    <h4
-                      className="font-semibold text-lg text-black mb-3 leading-tight"
-                      style={{ fontFamily: "Verdana, Geneva, sans-serif" }}
-                    >
-                      Struggling to find qualified leads for my B2B SaaS
-                    </h4>
-
-                    {/* Post content */}
-                    <p
-                      className="text-black text-sm leading-relaxed mb-4"
-                      style={{ fontFamily: "Verdana, Geneva, sans-serif" }}
-                    >
-                      I've tried cold email, LinkedIn outreach, and paid ads but
-                      the quality is terrible. Most leads aren't even in our
-                      target market. How do you find people who actually need
-                      your product?
-                    </p>
-
-                    {/* Action buttons */}
-                    <div className="flex items-center gap-2">
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <ArrowUp className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm font-medium text-gray-800">
-                          47
-                        </span>
-                        <ArrowDown className="w-4 h-4 text-gray-600 ml-1" />
-                      </div>
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <MessageSquare className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm text-gray-600">23</span>
-                      </div>
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <Share className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm text-gray-600">Share</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform -rotate-1 hover:rotate-0 hover:scale-105 shadow-lg shadow-blue-200/50 ml-8">
-                  <div className="p-4">
-                    {/* Header with subreddit icon and info */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-2">
-                        <SubredditIcon letter="s" />
-                        <div className="flex items-center gap-1 text-sm text-gray-500">
-                          <span className="font-medium">r/sales</span>
-                          <span>•</span>
-                          <span>5h ago</span>
-                        </div>
-                      </div>
-                      <MoreHorizontal className="w-5 h-5 text-gray-400" />
-                    </div>
-
-                    {/* Post title */}
-                    <h4
-                      className="font-semibold text-lg text-black mb-3 leading-tight"
-                      style={{ fontFamily: "Verdana, Geneva, sans-serif" }}
-                    >
-                      Anyone else tired of generic lead gen tools?
-                    </h4>
-
-                    {/* Post content */}
-                    <p
-                      className="text-black text-sm leading-relaxed mb-4"
-                      style={{ fontFamily: "Verdana, Geneva, sans-serif" }}
-                    >
-                      Every tool promises "high-quality leads" but they're all
-                      scraped from the same databases. I want to find prospects
-                      who are actually talking about needing our solution, not
-                      just fit our ICP on paper.
-                    </p>
-
-                    {/* Action buttons */}
-                    <div className="flex items-center gap-2">
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <ArrowUp className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm font-medium text-gray-800">
-                          89
-                        </span>
-                        <ArrowDown className="w-4 h-4 text-gray-600 ml-1" />
-                      </div>
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <MessageSquare className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm text-gray-600">34</span>
-                      </div>
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <Share className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm text-gray-600">Share</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-lg border hover:shadow-xl transition-all duration-300 transform rotate-1 hover:rotate-0 hover:scale-105 shadow-lg shadow-blue-200/50 mr-4">
-                  <div className="p-4">
-                    {/* Header with subreddit icon and info */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-2">
-                        <SubredditIcon letter="m" />
-                        <div className="flex items-center gap-1 text-sm text-gray-500">
-                          <span className="font-medium">r/marketing</span>
-                          <span>•</span>
-                          <span>1d ago</span>
-                        </div>
-                      </div>
-                      <MoreHorizontal className="w-5 h-5 text-gray-400" />
-                    </div>
-
-                    {/* Post title */}
-                    <h4
-                      className="font-semibold text-lg text-black mb-3 leading-tight"
-                      style={{ fontFamily: "Verdana, Geneva, sans-serif" }}
-                    >
-                      Reddit is an untapped goldmine for B2B research
-                    </h4>
-
-                    {/* Post content */}
-                    <p
-                      className="text-black text-sm leading-relaxed mb-4"
-                      style={{ fontFamily: "Verdana, Geneva, sans-serif" }}
-                    >
-                      I've been lurking in industry subreddits and the insights
-                      are incredible. People share their real problems, not what
-                      they think you want to hear. Wish there was a way to
-                      systematically track these conversations...
-                    </p>
-
-                    {/* Action buttons */}
-                    <div className="flex items-center gap-2">
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <ArrowUp className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm font-medium text-gray-800">
-                          156
-                        </span>
-                        <ArrowDown className="w-4 h-4 text-gray-600 ml-1" />
-                      </div>
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <MessageSquare className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm text-gray-600">67</span>
-                      </div>
-                      <div className="flex items-center bg-gray-100 border border-gray-200 rounded-full px-3 py-1">
-                        <Share className="w-4 h-4 text-gray-600 mr-1" />
-                        <span className="text-sm text-gray-600">Share</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            {/* Right side - Reddit post with AI reply */}
+            <div className="order-2 lg:order-2">
+              <div className="space-y-0">
+                <RedditPost
+                  subreddit="r/sales"
+                  author="u/salesmanager"
+                  timeAgo="2h ago"
+                  title="Anyone else tired of generic lead gen tools?"
+                  content="Every tool promises 'high-quality leads' but they're all scraped from the same databases. I want to find prospects who are actually talking about needing our solution, not just fit our ICP on paper. Has anyone found a better way?"
+                  upvotes={89}
+                  comments={34}
+                  companyRelevance={90}
+                />
+                <RedditReply isVisible={isVisible} autoStart={true} />
               </div>
             </div>
           </div>
