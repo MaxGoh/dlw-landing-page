@@ -30,7 +30,7 @@ export function Navbar() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center justify-center flex-1">
+          <div className="hidden lg:flex items-center justify-center flex-1">
             <div className="flex items-baseline space-x-8">
               <a
                 href="#why-reddit-section"
@@ -77,7 +77,7 @@ export function Navbar() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center">
             <Button
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]"
               onClick={() => trackButtonClick("book_demo", "navbar_desktop")}
@@ -89,7 +89,7 @@ export function Navbar() {
             </Button>
           </div>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-secondary hover:text-primary p-2 transition-colors"
@@ -102,7 +102,7 @@ export function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm shadow-lg border-t">
             <a
               href="#why-reddit-section"
