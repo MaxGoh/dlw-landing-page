@@ -127,7 +127,7 @@ export function Hero() {
   };
 
   return (
-    <section className="hero-pattern relative min-h-screen flex items-start justify-center px-4 pt-16 md:pt-20 lg:pt-24 xl:pt-28 pb-16 lg:pb-24 overflow-hidden">
+    <section className="hero-pattern relative flex items-start justify-center px-4 pt-16 md:pt-20 lg:pt-24 xl:pt-28 pb-20 md:pb-28 lg:pb-32 xl:pb-40 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         {/* Hero Content */}
         <div className="space-y-6 lg:space-y-6 text-center">
