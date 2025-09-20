@@ -13,11 +13,11 @@ export default function Page() {
     <>
       <Hero />
       <WhyReddit />
+      <SearchRanking />
       <Analysis />
       <Discovery />
       <Listen />
       <Engage />
-      <SearchRanking />
       <TimeSaver />
       <FAQ />
     </>

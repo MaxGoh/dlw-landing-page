@@ -16,9 +16,7 @@ export function Footer() {
 							className="mb-4"
 						/>
 						<p className="mt-3 text-sm text-gray-600">
-							Supercharge your Reddit marketing with AI-powered insights and
-							engagement tools. Find your audience, track trends, and grow your
-							brand on Reddit.
+							Grow your business by driving reddit traffic to your website, and get them ranked on search engines.
 						</p>
 						<div className="mt-6 flex space-x-6">
 							<a

@@ -45,7 +45,7 @@ export function Discovery() {
   return (
     <section
       id="discovery-section"
-      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50"
     >
       <div className="max-w-7xl mx-auto">
         <div

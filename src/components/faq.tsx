@@ -23,7 +23,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "How long does it take to see results?",
-    answer: "Most users see their first qualified leads within 48 hours of setup. Building authentic relationships on Reddit is a long-term strategy, with compound benefits growing over 3-6 months."
+    answer: "Most users see their first qualified leads within 48 hours of setup. Building authentic relationships on Reddit is a long-term strategy, with compound benefits growing over 1-3 months."
   },
   {
     question: "Can I customize the AI responses?",
@@ -90,10 +90,12 @@ export function FAQ() {
             Still have questions?
           </p>
           <a
-            href="mailto:hello@dolesswork.ai"
+            href="https://form.typeform.com/to/VVDtlvCz"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center text-primary font-semibold hover:underline"
           >
-            Contact our support team
+            Schedule a call with us
           </a>
         </div>
       </div>

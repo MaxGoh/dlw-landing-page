@@ -33,28 +33,40 @@ export function Navbar() {
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-baseline space-x-8">
               <a
-                href="/product"
+                href="#why-reddit-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
               >
-                Product
+                Grow on Reddit
               </a>
               <a
-                href="/use-cases"
+                href="#backlink-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
               >
-                Use Cases
+                Search Ranking
               </a>
               <a
-                href="/pricing"
+                href="#analysis-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
               >
-                Pricing
+                Analysis
               </a>
               <a
-                href="/blog"
+                href="#discovery-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
               >
-                Blog
+                Discovery
+              </a>
+              <a
+                href="#engage-section"
+                className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
+              >
+                Listen
+              </a>
+              <a
+                href="#engage-section"
+                className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
+              >
+                Engage
               </a>
             </div>
           </div>
@@ -83,32 +95,46 @@ export function Navbar() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm shadow-lg border-t">
             <a
-              href="#"
+              href="#why-reddit-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Product
+              Grow on Reddit
             </a>
             <a
-              href="#"
+              href="#backlink-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Use Cases
+              Search Ranking
             </a>
             <a
-              href="#"
+              href="#analysis-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Pricing
+              Analysis
             </a>
             <a
-              href="#"
+              href="#discovery-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Blog
+              Discovery
+            </a>
+            <a
+              href="#engage-section"
+              className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Listen
+            </a>
+            <a
+              href="#engage-section"
+              className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Engage
             </a>
             <div className="px-3 py-2">
               <Button

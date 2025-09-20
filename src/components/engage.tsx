@@ -34,7 +34,7 @@ export function Engage() {
   return (
     <section
       id="engage-section"
-      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50/50"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50"
     >
       <div className="max-w-7xl mx-auto">
         <div
@@ -69,21 +69,21 @@ export function Engage() {
               {/* Feature list */}
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <MessageCircle className="w-5 h-5 text-gray-800 mt-1 flex-shrink-0" />
+                  <MessageCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-800">
                     AI-assisted response suggestions that match Reddit's culture
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Users className="w-5 h-5 text-gray-800 mt-1 flex-shrink-0" />
+                  <Users className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-800">
                     Build genuine connections with potential customers
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Heart className="w-5 h-5 text-gray-800 mt-1 flex-shrink-0" />
+                  <Heart className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-800">
                     Track engagement metrics and community sentiment
                   </p>

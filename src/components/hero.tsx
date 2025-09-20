@@ -119,7 +119,7 @@ export function Hero() {
         {/* Hero Content */}
         <div className="space-y-6 lg:space-y-6 text-center">
           {/* Announcement Badge */}
-          <div className="flex justify-center animate-fadeInUp">
+          {/* <div className="flex justify-center animate-fadeInUp">
             <a
               href="https://form.typeform.com/to/J59frRUQ"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-primary/15 group"
@@ -131,7 +131,7 @@ export function Hero() {
                 Limited Beta Access Available
               </span>
             </a>
-          </div>
+          </div> */}
           {/* Main Headline & Description */}
           <div className="space-y-8 lg:space-y-10 animate-fadeInUp animation-delay-100">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-balance text-secondary font-black tracking-tight">
@@ -159,7 +159,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-balance">
-              Isolate what matters. Filter the noise. Drive traffic, build authority, access enhanced insights
+              Isolate what matters. Filter the noise. Drive traffic, build authority, access reddit insights
               and gain leads for your business.
             </p>
           </div>
@@ -206,7 +206,7 @@ export function Hero() {
             </p>
 
             {/* Trust Badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/80 backdrop-blur-sm border border-primary/20 shadow-md">
+            {/* <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/80 backdrop-blur-sm border border-primary/20 shadow-md">
               <div className="relative">
                 <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
                 <div className="absolute inset-0 w-3 h-3 bg-blue-500 rounded-full animate-ping opacity-75"></div>
@@ -214,7 +214,7 @@ export function Hero() {
               <span className="text-sm lg:text-base font-semibold text-secondary">
                 Only 50 beta spots remaining
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

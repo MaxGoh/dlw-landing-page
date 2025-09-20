@@ -46,7 +46,7 @@ export function Analysis() {
   };
 
   return (
-    <section id="analysis-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50/50">
+    <section id="analysis-section" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Container */}
         <div

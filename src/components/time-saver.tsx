@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, Target, Zap } from "lucide-react";
+import { Clock, Target, Zap } from "lucide-react";
 import Link from "next/link";
 
 export function TimeSaver() {
@@ -39,27 +39,39 @@ export function TimeSaver() {
           {/* Main heading */}
           <div className="space-y-4">
             <h2 className="text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
-              Save 20+ Hours Per Week
+              Take back your time.
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stop manually scrolling through Reddit. Let AI do the heavy lifting while you focus on closing deals.
-            </p>
           </div>
 
           {/* Process explanation */}
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-12 mt-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              From Hours to Minutes
+            <h3 className="text-3xl font-bold text-gray-900 mb-8">
+              Reddit marketing is time-consuming
             </h3>
-            <div className="max-w-3xl mx-auto text-lg text-gray-700 space-y-4">
-              <p>
-                What would usually take you <span className="font-semibold text-gray-900">2-3 hours a day</span> scrolling through different subreddits
-                now takes <span className="font-semibold text-gray-900">maybe 10 minutes at most</span> to just review, polish, and send.
-              </p>
-              <p>
-                Our AI monitors hundreds of subreddits 24/7, identifies high-intent prospects,
-                and drafts personalized responses that match Reddit's culture and context.
-              </p>
+            <div className="max-w-3xl mx-auto space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">5+ hrs</div>
+                  <p className="text-gray-700">Finding the right subreddits</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">8+ hrs</div>
+                  <p className="text-gray-700">Creating valuable content</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">7+ hrs</div>
+                  <p className="text-gray-700">Writing non-spammy responses</p>
+                </div>
+              </div>
+
+              <div className="text-center py-6 border-t border-gray-200">
+                <p className="text-xl text-gray-700 mb-4">
+                  That's <span className="font-bold text-gray-900">20 hours every week</span> just to maintain a presence on Reddit.
+                </p>
+                <p className="text-3xl font-bold text-primary">
+                  We reduce it to 10 minutes a day.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -67,11 +79,10 @@ export function TimeSaver() {
           <div className="pt-8">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-10 py-7 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group transform hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-10 py-7 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
-              <Link href="https://form.typeform.com/to/J59frRUQ" className="flex items-center gap-2">
+              <Link href="https://form.typeform.com/to/J59frRUQ">
                 Book a Demo
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
               </Link>
             </Button>
             <p className="text-sm text-gray-500 mt-4">

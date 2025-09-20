@@ -29,7 +29,7 @@ export function SearchRanking() {
   return (
     <section
       id="backlink-section"
-      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50"
     >
       <div className="max-w-7xl mx-auto">
         <div className={`grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"}`}
@@ -48,14 +48,13 @@ export function SearchRanking() {
 
 
               <h2 className="text-4xl lg:text-5xl font-black leading-tight">
-                Build authority with strategic link placement
+                Build high-quality backlinks with strategic link placement
               </h2>
 
               <p className="text-lg leading-relaxed">
-                Naturally earn high-quality backlinks by providing valuable
-                insights and solutions. Our system identifies perfect
-                opportunities to share your expertise and build domain
-                authority.
+                Naturally earn backlinks by providing valuable insights and solutions.
+                Our solution identifies quality posts where your business will
+                be a natural fit.
               </p>
             </div>
 
@@ -106,7 +105,7 @@ export function SearchRanking() {
                   }`}
               >
                 <Brain className="w-4 h-4" />
-                AEO
+                GEO
               </button>
             </div>
 
