@@ -23,7 +23,6 @@ import { trackButtonClick, trackFormSubmit } from "@/lib/analytics";
 
 export function Hero() {
   const [websiteUrl, setWebsiteUrl] = useState("");
-  const [urlError, setUrlError] = useState("");
   const [placeholderText, setPlaceholderText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -90,40 +89,16 @@ export function Hero() {
     return () => clearTimeout(timeoutId);
   }, [placeholderText, currentIndex, isTyping, websiteExamples]);
 
-  const validateUrl = (url: string) => {
-    if (!url) return "Please enter a website URL";
-
-    try {
-      const urlObj = new URL(url.startsWith("http") ? url : `https://${url}`);
-      if (!urlObj.hostname.includes(".")) {
-        return "Please enter a valid website URL";
-      }
-      return "";
-    } catch {
-      return "Please enter a valid website URL";
-    }
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const error = validateUrl(websiteUrl);
-    if (error) {
-      setUrlError(error);
-      return;
-    }
-    setUrlError("");
     trackFormSubmit("hero_discover_form");
-    console.log("Finding subreddits for:", websiteUrl);
-    // TODO: Implement subreddit discovery logic
+    // Navigate to consultation form
+    window.location.href = "https://form.typeform.com/to/J59frRUQ";
   };
 
   const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setWebsiteUrl(value);
-    if (urlError && value) {
-      const error = validateUrl(value);
-      if (!error) setUrlError("");
-    }
   };
 
   return (
@@ -189,28 +164,17 @@ export function Hero() {
                   placeholder={placeholderText}
                   value={websiteUrl}
                   onChange={handleUrlChange}
-                  className={`h-14 lg:h-16 text-base lg:text-lg px-6 bg-white/80 backdrop-blur-sm border-2 border-border/50 focus-visible:border-primary shadow-lg hover:shadow-xl transition-shadow ${urlError ? "border-destructive focus-visible:ring-destructive" : ""}`}
-                  required
+                  className="h-14 lg:h-16 text-base lg:text-lg px-6 bg-white/80 backdrop-blur-sm border-2 border-border/50 focus-visible:border-primary shadow-lg hover:shadow-xl transition-shadow"
                 />
-                {urlError && (
-                  <p className="text-sm text-destructive mt-2 text-left">
-                    {urlError}
-                  </p>
-                )}
               </div>
               <Button
                 type="submit"
                 size="default"
-                className="h-14 lg:h-16 px-8 lg:px-10 bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white font-bold text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="h-14 lg:h-16 px-8 lg:px-10 bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white font-bold text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
                 onClick={() => trackButtonClick("discover_now", "hero")}
               >
-                <Link
-                  href="https://form.typeform.com/to/J59frRUQ"
-                  className="flex items-center gap-2"
-                >
-                  <Search className="w-5 h-5" />
-                  <span>Book free consultation</span>
-                </Link>
+                <Search className="w-5 h-5" />
+                <span>Book free consultation</span>
               </Button>
             </form>
 
