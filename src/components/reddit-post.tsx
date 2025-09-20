@@ -75,9 +75,7 @@ export function RedditPost({
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">
-                    Upvotes ({upvotes})
-                  </span>
+                  <span className="text-gray-600">Upvotes ({upvotes})</span>
                   <span className="font-medium">
                     {Math.min(Math.round((upvotes / 500) * 35), 35)}%
                   </span>
@@ -90,7 +88,9 @@ export function RedditPost({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Company Relevance</span>
-                  <span className="font-medium">{Math.round((companyRelevance / 100) * 35)}%</span>
+                  <span className="font-medium">
+                    {Math.round((companyRelevance / 100) * 35)}%
+                  </span>
                 </div>
                 <div className="border-t border-gray-200 mt-3 pt-3">
                   <div className="flex justify-between font-semibold text-green-600">
@@ -142,9 +142,7 @@ export function RedditPost({
               </div>
               <div className="space-y-1">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">
-                    Upvotes ({upvotes})
-                  </span>
+                  <span className="text-gray-600">Upvotes ({upvotes})</span>
                   <span className="font-medium">
                     {Math.min(Math.round((upvotes / 500) * 35), 35)}%
                   </span>
@@ -157,7 +155,9 @@ export function RedditPost({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Company Relevance</span>
-                  <span className="font-medium">{Math.round((companyRelevance / 100) * 35)}%</span>
+                  <span className="font-medium">
+                    {Math.round((companyRelevance / 100) * 35)}%
+                  </span>
                 </div>
                 <div className="border-t border-gray-200 mt-2 pt-2">
                   <div className="flex justify-between font-semibold text-green-600">
@@ -173,7 +173,9 @@ export function RedditPost({
       </div>
 
       {/* Post Title */}
-      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:pr-20">{title}</h3>
+      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:pr-20">
+        {title}
+      </h3>
 
       {/* Post Content */}
       <p className="text-gray-700 mb-4 leading-relaxed">{content}</p>

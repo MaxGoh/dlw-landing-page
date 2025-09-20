@@ -46,8 +46,9 @@ export function Listen() {
     >
       <div className="max-w-7xl mx-auto">
         <div
-          className={`relative overflow-hidden px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
+          className={`relative overflow-hidden px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          }`}
           style={{
             transformOrigin: "center center",
           }}
@@ -67,10 +68,12 @@ export function Listen() {
                 </h2>
 
                 <p className="text-lg text-gray-800 leading-relaxed">
-                  Your prospects are on Reddit right now asking for recommendations.
-                  Your customers are explaining why they chose you (or didn't).
-                  Your competitors are being discussed in threads you've never seen.
-                  Our intelligence finds and scores these conversations so you can join the valuable ones.                </p>
+                  Your prospects are on Reddit right now asking for
+                  recommendations. Your customers are explaining why they chose
+                  you (or didn't). Your competitors are being discussed in
+                  threads you've never seen. Our intelligence finds and scores
+                  these conversations so you can join the valuable ones.{" "}
+                </p>
               </div>
 
               {/* Feature list */}

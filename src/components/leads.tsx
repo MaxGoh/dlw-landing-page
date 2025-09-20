@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, UserCheck, TrendingUp, DollarSign } from "lucide-react";
+import { trackButtonClick } from "@/lib/analytics";
 
 export function Leads() {
   const [isVisible, setIsVisible] = useState(false);
@@ -60,7 +61,12 @@ export function Leads() {
                   solutions.
                 </p>
 
-                <Button className="bg-[#993955] hover:bg-[#993955]/90 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">
+                <Button
+                  className="bg-[#993955] hover:bg-[#993955]/90 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2"
+                  onClick={() =>
+                    trackButtonClick("generate_leads", "leads_section")
+                  }
+                >
                   Generate leads
                   <ArrowRight className="w-4 h-4" />
                 </Button>

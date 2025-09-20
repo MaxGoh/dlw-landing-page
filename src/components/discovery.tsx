@@ -49,8 +49,9 @@ export function Discovery() {
     >
       <div className="max-w-7xl mx-auto">
         <div
-          className={`relative overflow-hidden rounded-3xl px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
+          className={`relative overflow-hidden rounded-3xl px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          }`}
           style={{
             transformOrigin: "center center",
           }}
@@ -87,7 +88,8 @@ export function Discovery() {
                 <div className="flex items-start gap-3">
                   <Search className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-sm sm:text-base">
-                    AI-powered subreddit discovery based off your business profile
+                    AI-powered subreddit discovery based off your business
+                    profile
                   </p>
                 </div>
 
@@ -101,7 +103,8 @@ export function Discovery() {
                 <div className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <p className="text-sm sm:text-base">
-                    Access subreddit insights with sentimental analysis & keyword heat map
+                    Access subreddit insights with sentimental analysis &
+                    keyword heat map
                   </p>
                 </div>
               </div>

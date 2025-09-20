@@ -4,7 +4,7 @@ import "@fontsource-variable/figtree";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Do Less Work | Listen to what actually matters on Reddit",
-  description: "Isolate what matters. Filter the noise. Drive traffic, build authority and gain leads for your business",
+  description:
+    "Isolate what matters. Filter the noise. Drive traffic, build authority and gain leads for your business",
 };
 
 export default function RootLayout({
@@ -28,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-F906F8S345" />}
+      {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics gaId="G-F906F8S345" />
+      )}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -49,45 +49,41 @@ export function WhyReddit() {
             Reddit has <span className="font-bold text-primary">1.2B</span>{" "}
             monthly active users, with over{" "}
             <span className="font-bold text-primary">50M</span> posts being
-            published monthly. 8X your brand awareness by being involved in the right discussion,
-            at the right time.
+            published monthly. 8X your brand awareness by being involved in the
+            right discussion, at the right time.
           </p>
 
           {/* Stats Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 max-w-6xl mx-auto">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-              <h3 className="text-4xl font-bold text-primary">
-                215M
-              </h3>
+              <h3 className="text-4xl font-bold text-primary">215M</h3>
               <p className="text-sm text-gray-600 mt-2">
-                Reddit has millions of ads-addressable visitors in the US monthly.<sup>1</sup>
+                Reddit has millions of ads-addressable visitors in the US
+                monthly.<sup>1</sup>
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-              <h3 className="text-4xl font-bold text-primary">
-                +46%
-              </h3>
+              <h3 className="text-4xl font-bold text-primary">+46%</h3>
               <p className="text-sm text-gray-600 mt-2">
-                More likely to trust brands that advertise on Reddit.<sup>2</sup>
+                More likely to trust brands that advertise on Reddit.
+                <sup>2</sup>
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-              <h3 className="text-4xl font-bold text-primary">
-                1.7x
-              </h3>
+              <h3 className="text-4xl font-bold text-primary">1.7x</h3>
               <p className="text-sm text-gray-600 mt-2">
-                Higher brand association to ensure consumers think of your brand first.<sup>3</sup>
+                Higher brand association to ensure consumers think of your brand
+                first.<sup>3</sup>
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-              <h3 className="text-4xl font-bold text-primary">
-                +12%
-              </h3>
+              <h3 className="text-4xl font-bold text-primary">+12%</h3>
               <p className="text-sm text-gray-600 mt-2">
-                Brand favorability lift to improve your favor amongst consumers.<sup>4</sup>
+                Brand favorability lift to improve your favor amongst consumers.
+                <sup>4</sup>
               </p>
             </div>
           </div>

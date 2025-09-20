@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { trackNavClick, trackButtonClick } from "@/lib/analytics";
 
 export function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <nav className="w-full bg-transparent">
@@ -35,36 +35,42 @@ export function Navbar() {
               <a
                 href="#why-reddit-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
+                onClick={() => trackNavClick("grow_on_reddit")}
               >
                 Grow on Reddit
               </a>
               <a
                 href="#backlink-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
+                onClick={() => trackNavClick("search_ranking")}
               >
                 Search Ranking
               </a>
               <a
                 href="#analysis-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
+                onClick={() => trackNavClick("analysis")}
               >
                 Analysis
               </a>
               <a
                 href="#discovery-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
+                onClick={() => trackNavClick("discovery")}
               >
                 Discovery
               </a>
               <a
                 href="#engage-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
+                onClick={() => trackNavClick("listen")}
               >
                 Listen
               </a>
               <a
                 href="#engage-section"
                 className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold"
+                onClick={() => trackNavClick("engage")}
               >
                 Engage
               </a>
@@ -72,7 +78,11 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]" asChild>
+            <Button
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]"
+              onClick={() => trackButtonClick("book_demo", "navbar_desktop")}
+              asChild
+            >
               <Link href="https://form.typeform.com/to/J59frRUQ">
                 Book a demo
               </Link>
@@ -97,49 +107,70 @@ export function Navbar() {
             <a
               href="#why-reddit-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                trackNavClick("grow_on_reddit", true);
+                setIsMobileMenuOpen(false);
+              }}
             >
               Grow on Reddit
             </a>
             <a
               href="#backlink-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                trackNavClick("search_ranking", true);
+                setIsMobileMenuOpen(false);
+              }}
             >
               Search Ranking
             </a>
             <a
               href="#analysis-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                trackNavClick("analysis", true);
+                setIsMobileMenuOpen(false);
+              }}
             >
               Analysis
             </a>
             <a
               href="#discovery-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                trackNavClick("discovery", true);
+                setIsMobileMenuOpen(false);
+              }}
             >
               Discovery
             </a>
             <a
               href="#engage-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                trackNavClick("listen", true);
+                setIsMobileMenuOpen(false);
+              }}
             >
               Listen
             </a>
             <a
               href="#engage-section"
               className="text-secondary hover:text-primary block px-3 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                trackNavClick("engage", true);
+                setIsMobileMenuOpen(false);
+              }}
             >
               Engage
             </a>
             <div className="px-3 py-2">
               <Button
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold font-[family-name:Ppmori,sans-serif]"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  trackButtonClick("book_demo", "navbar_mobile");
+                  setIsMobileMenuOpen(false);
+                }}
                 asChild
               >
                 <Link href="https://form.typeform.com/to/J59frRUQ">
@@ -151,5 +182,5 @@ export function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

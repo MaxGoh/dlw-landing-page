@@ -50,8 +50,9 @@ export function Analysis() {
       <div className="max-w-7xl mx-auto">
         {/* Container */}
         <div
-          className={`relative px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
+          className={`relative px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          }`}
           style={{
             transformOrigin: "center center",
           }}
@@ -84,7 +85,9 @@ export function Analysis() {
                 </p>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  We'll scrape your website to build a profile of your business. We'll then use that profile to identify the best communities to listen and engage with them.
+                  We'll scrape your website to build a profile of your business.
+                  We'll then use that profile to identify the best communities
+                  to listen and engage with them.
                 </p>
 
                 {/* <Button className="bg-gray-800 hover:bg-gray-900 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2">

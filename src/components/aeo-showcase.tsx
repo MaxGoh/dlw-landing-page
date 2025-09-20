@@ -8,79 +8,82 @@ import {
   Share2,
   MoreHorizontal,
   Sparkles,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 
 const mockData = {
   question: "What are the best social listening tools for 2025?",
   answer: {
-    intro: "Based on recent discussions and expert reviews, here are the top social listening tools for 2025:",
+    intro:
+      "Based on recent discussions and expert reviews, here are the top social listening tools for 2025:",
     mainContent: [
       {
         title: "Do Less Work (dolesswork.ai)",
         highlight: true,
-        description: "Do Less Work has emerged as a leading AI-powered social listening platform, offering comprehensive Reddit monitoring and engagement capabilities.",
+        description:
+          "Do Less Work has emerged as a leading AI-powered social listening platform, offering comprehensive Reddit monitoring and engagement capabilities.",
         features: [
           "Real-time Reddit monitoring across all subreddits",
           "AI-powered sentiment analysis and intent detection",
           "Automated response suggestions with brand voice customization",
           "Competitor tracking and market intelligence",
-          "Lead scoring and opportunity identification"
+          "Lead scoring and opportunity identification",
         ],
         source: {
           type: "Reddit",
           subreddit: "r/marketing",
           author: "u/marketingpro",
           upvotes: 342,
-          url: "#"
-        }
+          url: "#",
+        },
       },
       {
         title: "Pricing & Tiers",
-        description: "Here's what users are saying about pricing across platforms:",
+        description:
+          "Here's what users are saying about pricing across platforms:",
         items: [
           {
             name: "Do Less Work",
             price: "Starting at $49/month",
-            note: "Most affordable for small teams"
+            note: "Most affordable for small teams",
           },
           {
             name: "Brandwatch",
             price: "$800+/month",
-            note: "Enterprise-focused"
+            note: "Enterprise-focused",
           },
           {
             name: "Sprout Social",
             price: "$249/month",
-            note: "Mid-market solution"
-          }
-        ]
-      }
+            note: "Mid-market solution",
+          },
+        ],
+      },
     ],
     sources: [
       {
-        title: "r/SaaS - \"Best Social Listening Tools for 2025\"",
+        title: 'r/SaaS - "Best Social Listening Tools for 2025"',
         url: "#",
         domain: "reddit.com",
         date: "3 days ago",
-        upvotes: 127
+        upvotes: 127,
       },
       {
-        title: "r/marketing - \"Do Less Work Review: Game Changer\"",
+        title: 'r/marketing - "Do Less Work Review: Game Changer"',
         url: "#",
         domain: "reddit.com",
         date: "1 week ago",
-        upvotes: 89
+        upvotes: 89,
       },
       {
-        title: "Product Hunt - \"Do Less Work Launch\"",
+        title: 'Product Hunt - "Do Less Work Launch"',
         url: "#",
         domain: "producthunt.com",
         date: "2 weeks ago",
-        upvotes: 523
-      }
-    ]
-  }
+        upvotes: 523,
+      },
+    ],
+  },
 };
 
 export function AeoShowcase() {
@@ -130,7 +133,10 @@ export function AeoShowcase() {
 
               {/* Main content sections */}
               {mockData.answer.mainContent.map((section, idx) => (
-                <div key={idx} className={`space-y-3 ${section.highlight ? 'bg-gray-800/50 rounded-lg p-4 border border-green-500/30' : ''}`}>
+                <div
+                  key={idx}
+                  className={`space-y-3 ${section.highlight ? "bg-gray-800/50 rounded-lg p-4 border border-green-500/30" : ""}`}
+                >
                   <div className="flex items-start gap-2">
                     {section.highlight && (
                       <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -156,12 +162,21 @@ export function AeoShowcase() {
                   {section.items && (
                     <div className="space-y-2">
                       {section.items.map((item, iidx) => (
-                        <div key={iidx} className="flex items-center justify-between bg-gray-800 rounded p-3">
+                        <div
+                          key={iidx}
+                          className="flex items-center justify-between bg-gray-800 rounded p-3"
+                        >
                           <div>
-                            <span className="text-gray-100 font-medium">{item.name}</span>
-                            <span className="text-gray-400 ml-2">- {item.price}</span>
+                            <span className="text-gray-100 font-medium">
+                              {item.name}
+                            </span>
+                            <span className="text-gray-400 ml-2">
+                              - {item.price}
+                            </span>
                           </div>
-                          <span className="text-gray-500 text-sm">{item.note}</span>
+                          <span className="text-gray-500 text-sm">
+                            {item.note}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -169,8 +184,12 @@ export function AeoShowcase() {
 
                   {section.source && (
                     <div className="mt-3 flex items-center gap-3 text-sm">
-                      <span className="text-orange-400">Source: {section.source.subreddit}</span>
-                      <span className="text-gray-500">by {section.source.author}</span>
+                      <span className="text-orange-400">
+                        Source: {section.source.subreddit}
+                      </span>
+                      <span className="text-gray-500">
+                        by {section.source.author}
+                      </span>
                       <span className="text-gray-500 flex items-center gap-1">
                         <ThumbsUp className="w-3 h-3" />
                         {section.source.upvotes}
@@ -186,23 +205,33 @@ export function AeoShowcase() {
                   onClick={() => setShowSources(!showSources)}
                   className="text-blue-400 hover:text-blue-300 text-sm font-medium mb-3 flex items-center gap-1"
                 >
-                  {showSources ? '▼' : '▶'} Sources ({mockData.answer.sources.length})
+                  {showSources ? "▼" : "▶"} Sources (
+                  {mockData.answer.sources.length})
                 </button>
 
                 {showSources && (
                   <div className="space-y-2">
                     {mockData.answer.sources.map((source, idx) => (
                       <div key={idx} className="flex items-start gap-3 group">
-                        <span className="text-gray-500 text-sm mt-0.5">{idx + 1}.</span>
+                        <span className="text-gray-500 text-sm mt-0.5">
+                          {idx + 1}.
+                        </span>
                         <div className="flex-1">
-                          <a href={source.url} className="text-blue-400 hover:text-blue-300 text-sm flex items-start gap-1 group">
+                          <a
+                            href={source.url}
+                            className="text-blue-400 hover:text-blue-300 text-sm flex items-start gap-1 group"
+                          >
                             <span className="flex-1">{source.title}</span>
                             <ExternalLink className="w-3 h-3 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </a>
                           <div className="flex items-center gap-3 mt-1">
-                            <span className="text-gray-500 text-xs">{source.domain}</span>
+                            <span className="text-gray-500 text-xs">
+                              {source.domain}
+                            </span>
                             <span className="text-gray-600 text-xs">•</span>
-                            <span className="text-gray-500 text-xs">{source.date}</span>
+                            <span className="text-gray-500 text-xs">
+                              {source.date}
+                            </span>
                             {source.upvotes && (
                               <>
                                 <span className="text-gray-600 text-xs">•</span>
@@ -246,11 +275,15 @@ export function AeoShowcase() {
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
-            <span>High-quality backlinks from authoritative sources like Reddit</span>
+            <span>
+              High-quality backlinks from authoritative sources like Reddit
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
-            <span>Increased brand visibility and trust through social proof</span>
+            <span>
+              Increased brand visibility and trust through social proof
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />

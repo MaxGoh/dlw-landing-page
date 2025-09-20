@@ -1,17 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  MessageCircle,
-  Users,
-  Heart,
-} from "lucide-react";
+import { MessageCircle, Users, Heart } from "lucide-react";
 import { RedditPost } from "@/components/reddit-post";
 import { RedditReply } from "@/components/reddit-reply";
 
 export function Engage() {
   const [isVisible, setIsVisible] = useState(false);
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,8 +33,9 @@ export function Engage() {
     >
       <div className="max-w-7xl mx-auto">
         <div
-          className={`relative overflow-hidden px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
+          className={`relative overflow-hidden px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          }`}
           style={{
             transformOrigin: "center center",
           }}
@@ -63,7 +59,6 @@ export function Engage() {
                   answering questions, and building trust. Our AI helps craft
                   authentic responses that resonate with the Reddit community.
                 </p>
-
               </div>
 
               {/* Feature list */}

@@ -5,9 +5,21 @@ import type React from "react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MessageSquare, Search, TrendingUp, DollarSign, Clock, MousePointer, Shield, Lightbulb, Zap, ScrollText } from "lucide-react";
+import {
+  MessageSquare,
+  Search,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  MousePointer,
+  Shield,
+  Lightbulb,
+  Zap,
+  ScrollText,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { trackButtonClick, trackFormSubmit } from "@/lib/analytics";
 
 export function Hero() {
   const [websiteUrl, setWebsiteUrl] = useState("");
@@ -100,6 +112,7 @@ export function Hero() {
       return;
     }
     setUrlError("");
+    trackFormSubmit("hero_discover_form");
     console.log("Finding subreddits for:", websiteUrl);
     // TODO: Implement subreddit discovery logic
   };
@@ -150,8 +163,7 @@ export function Hero() {
                 traffic
               </span>{" "}
               <br className="md:hidden" />
-              and{" "}
-              <br className="hidden lg:block" />
+              and <br className="hidden lg:block" />
               boosts{" "}
               <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
                 search rankings
@@ -159,8 +171,9 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-balance">
-              Isolate what matters. Filter the noise. Drive traffic, build authority, access reddit insights
-              and gain leads for your business.
+              Isolate what matters. Filter the noise. Drive traffic, build
+              authority, access reddit insights and gain leads for your
+              business.
             </p>
           </div>
 
@@ -189,6 +202,7 @@ export function Hero() {
                 type="submit"
                 size="default"
                 className="h-14 lg:h-16 px-8 lg:px-10 bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white font-bold text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                onClick={() => trackButtonClick("discover_now", "hero")}
               >
                 <Link
                   href="https://form.typeform.com/to/J59frRUQ"
@@ -202,7 +216,8 @@ export function Hero() {
 
             <p className="text-sm lg:text-base text-muted-foreground max-w-lg mx-auto">
               We'll analyze your business to build a profile of your target
-              audience and identify the best communities to listen and engage with them.
+              audience and identify the best communities to listen and engage
+              with them.
             </p>
 
             {/* Trust Badge */}
