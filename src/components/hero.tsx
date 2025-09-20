@@ -171,7 +171,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-balance">
-              Isolate what matters. Filter the noise. Drive traffic, build
+              Isolate the noise in Reddit. Drive traffic, build
               authority, access reddit insights and gain leads for your
               business.
             </p>
@@ -209,15 +209,14 @@ export function Hero() {
                   className="flex items-center gap-2"
                 >
                   <Search className="w-5 h-5" />
-                  <span>Discover Now</span>
+                  <span>Book free consultation</span>
                 </Link>
               </Button>
             </form>
 
             <p className="text-sm lg:text-base text-muted-foreground max-w-lg mx-auto">
               We'll analyze your business to build a profile of your target
-              audience and identify the best communities to listen and engage
-              with them.
+              audience and identify the best communities to drive traffic and grow search ranking.
             </p>
 
             {/* Trust Badge */}
