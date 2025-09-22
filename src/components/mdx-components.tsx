@@ -82,7 +82,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         const [text, ...params] = alt.split('|');
         altText = text.trim();
 
-        params.forEach(param => {
+        params.forEach((param: string) => {
           const [key, value] = param.split(':');
           if (key === 'size') {
             switch(value) {
