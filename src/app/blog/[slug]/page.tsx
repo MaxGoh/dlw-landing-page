@@ -74,10 +74,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {post.title}
         </h1>
 
-        <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
-          {post.description}
-        </p>
-
         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
           <time dateTime={post.date}>
             {new Date(post.date).toLocaleDateString('en-US', {
