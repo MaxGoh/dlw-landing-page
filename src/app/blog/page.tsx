@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllPosts, getAllTags } from '@/lib/blog';
 
 export default function BlogPage() {
@@ -7,12 +8,27 @@ export default function BlogPage() {
 
   return (
     <div>
-      <header className="mb-12">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-          Blog
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400">
-          Insights, tutorials, and updates from our team
+      <header className="mb-12 text-center">
+        <div className="mb-6">
+          <Image
+            src="/dlw-logo.svg"
+            alt="DLW Logo"
+            width={240}
+            height={180}
+            className="mx-auto"
+          />
+        </div>
+        <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          Welcome to the Do Less Work Blog, we will share everything relating to Marketing, especially on{' '}
+          <Image
+            src="/reddit.svg"
+            alt="Reddit logo"
+            width={24}
+            height={24}
+            className="inline-block w-5 h-5 md:w-6 md:h-6 align-text-bottom"
+          />
+          {' '}
+          <span className="text-[#FF4500] font-semibold">Reddit</span>. You can find our product and company updates here too.
         </p>
       </header>
 
