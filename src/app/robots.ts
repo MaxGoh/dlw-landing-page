@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://dolesswork.com/sitemap.xml',
+    sitemap: 'https://dolesswork.ai/sitemap.xml',
   };
 }
