@@ -1,6 +1,3 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   MoreHorizontal,
@@ -16,7 +13,7 @@ import {
 import { RecommendedSubreddits } from "@/components/recommended-subreddits";
 
 export function Discovery() {
-  const [isVisible, setIsVisible] = useState(false);
+  const isVisible = true;
 
   const SubredditIcon = ({ letter }: { letter: string }) => (
     <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">
@@ -24,23 +21,6 @@ export function Discovery() {
     </div>
   );
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 },
-    );
-
-    const element = document.getElementById("discovery-section");
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section

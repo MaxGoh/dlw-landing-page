@@ -1,5 +1,3 @@
-"use client";
-
 import { Headphones, ChevronRight } from "lucide-react";
 
 interface SubredditData {

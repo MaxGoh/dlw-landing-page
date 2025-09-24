@@ -77,8 +77,8 @@
 }
 
 @theme inline {
-  /* Updated default font to Figtree */
-  --font-sans: "Figtree Variable", sans-serif;
+  /* Default font switched to Geist */
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: var(--font-geist-mono);
   /* Replaced Reddit Sans with system fonts for better compatibility */
   --font-reddit-sans:

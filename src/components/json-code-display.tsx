@@ -1,5 +1,3 @@
-"use client";
-
 interface JsonCodeDisplayProps {
   data: Record<string, any>;
   fileName?: string;

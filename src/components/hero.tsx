@@ -128,6 +128,7 @@ export function Hero() {
                 alt="Reddit logo"
                 width={56}
                 height={56}
+                priority
                 className="inline-block w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 mr-2 align-baseline"
               />
               <span className="text-[#FF4500]">Reddit</span> intelligence{" "}
