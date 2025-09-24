@@ -1,28 +1,7 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export function WhyReddit() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 },
-    );
-
-    const element = document.getElementById("why-reddit-section");
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const isVisible = true;
 
   return (
     <section id="why-reddit-section" className="pt-12 pb-20 lg:py-20 px-4">

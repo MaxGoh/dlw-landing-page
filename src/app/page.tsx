@@ -8,6 +8,9 @@ import { TimeSaver } from "@/components/time-saver";
 import { FAQ } from "@/components/faq";
 import { Listen } from "@/components/listen";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export default function Page() {
   return (
     <>

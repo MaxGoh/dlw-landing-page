@@ -31,6 +31,7 @@ export function Navbar() {
                     alt="DLW Logo"
                     width={180}
                     height={140}
+                    priority
                   />
                 </div>
               </Link>

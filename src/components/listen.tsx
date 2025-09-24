@@ -1,6 +1,3 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import {
   MessageCircle,
   Users,
@@ -13,7 +10,7 @@ import {
 } from "lucide-react";
 
 export function Listen() {
-  const [isVisible, setIsVisible] = useState(false);
+  const isVisible = true;
 
   const SubredditIcon = ({ letter }: { letter: string }) => (
     <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">
@@ -21,23 +18,6 @@ export function Listen() {
     </div>
   );
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 },
-    );
-
-    const element = document.getElementById("engage-section");
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section

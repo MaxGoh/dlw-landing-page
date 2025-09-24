@@ -1,29 +1,8 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import { JsonCodeDisplay } from "@/components/json-code-display";
 import { Wand2, Search } from "lucide-react";
 
 export function Analysis() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 },
-    );
-
-    const element = document.getElementById("analysis-section");
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const isVisible = true;
 
   const sampleData = {
     company: "Do Less Work",

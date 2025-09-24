@@ -14,6 +14,7 @@ export default function BlogPage() {
             alt="DLW Logo"
             width={240}
             height={180}
+            priority
             className="mx-auto"
           />
         </div>
@@ -24,6 +25,7 @@ export default function BlogPage() {
             alt="Reddit logo"
             width={24}
             height={24}
+            priority
             className="inline-block w-5 h-5 md:w-6 md:h-6 align-text-bottom"
           />
           {' '}
@@ -96,3 +98,5 @@ export default function BlogPage() {
     </div>
   );
 }
+
+export const dynamic = 'force-static';
