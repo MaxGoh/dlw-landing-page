@@ -31,7 +31,7 @@ export function Listen() {
       { threshold: 0.2 },
     );
 
-    const element = document.getElementById("engage-section");
+    const element = document.getElementById("listen-section");
     if (element) {
       observer.observe(element);
     }
@@ -41,8 +41,8 @@ export function Listen() {
 
   return (
     <section
-      id="engage-section"
-      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      id="listen-section"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50"
     >
       <div className="max-w-7xl mx-auto">
         <div

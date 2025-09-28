@@ -46,7 +46,10 @@ export function Analysis() {
   };
 
   return (
-    <section id="analysis-section" className="py-16 px-4 sm:px-6 lg:px-8">
+    <section
+      id="analysis-section"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-primary"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Container */}
         <div
@@ -71,20 +74,20 @@ export function Analysis() {
             <div className="space-y-8 order-1 lg:order-2">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold border-2 border-primary text-primary uppercase tracking-wider">
+                  <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold border-2 border-white text-white uppercase tracking-wider">
                     ANALYSIS
                   </span>
                 </div>
 
-                <h2 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+                <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
                   We figure out what your business does.
                 </h2>
 
-                <p className="text-base lg:text-lg font-semibold text-blue-500">
+                <p className="text-base lg:text-lg font-semibold text-blue-100">
                   No pre-requisites required
                 </p>
 
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   We'll scrape your website to build a profile of your business.
                   We'll then use that profile to identify the best communities
                   to listen and engage with them.
@@ -99,15 +102,15 @@ export function Analysis() {
               {/* Feature list */}
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Search className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-700">
+                  <Search className="w-5 h-5 text-blue-100 mt-1 flex-shrink-0" />
+                  <p className="text-white/90">
                     One-click analysis of your business
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Wand2 className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-700">
+                  <Wand2 className="w-5 h-5 text-blue-100 mt-1 flex-shrink-0" />
+                  <p className="text-white/90">
                     Learn the best keywords to use for listening and ranking on.
                   </p>
                 </div>

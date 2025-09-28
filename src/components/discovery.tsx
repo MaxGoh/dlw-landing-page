@@ -45,7 +45,7 @@ export function Discovery() {
   return (
     <section
       id="discovery-section"
-      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-primary"
     >
       <div className="max-w-7xl mx-auto">
         <div
@@ -61,16 +61,16 @@ export function Discovery() {
             <div className="space-y-6 lg:space-y-8">
               <div className="space-y-4 lg:space-y-6">
                 <div className="inline-block">
-                  <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold border-2 border-primary text-primary uppercase tracking-wider">
+                  <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold border-2 border-white text-white uppercase tracking-wider">
                     DISCOVERY
                   </span>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
                   Find customers looking for solutions like yours.
                 </h2>
 
-                <p className="text-base sm:text-lgleading-relaxed">
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed">
                   Automatically discover relevant subreddits and communities
                   where your target audience discusses their challenges, asks
                   for recommendations, and shares experiences related to your
@@ -86,23 +86,23 @@ export function Discovery() {
               {/* Feature list */}
               <div className="space-y-3 lg:space-y-4">
                 <div className="flex items-start gap-3">
-                  <Search className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-sm sm:text-base">
+                  <Search className="w-5 h-5 text-blue-100 mt-1 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-white/90">
                     AI-powered subreddit discovery based off your business
                     profile
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Target className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-sm sm:text-base">
+                  <Target className="w-5 h-5 text-blue-100 mt-1 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-white/90">
                     Identify high-intent keywords and phrases your customers use
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <TrendingUp className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-sm sm:text-base">
+                  <TrendingUp className="w-5 h-5 text-blue-100 mt-1 flex-shrink-0" />
+                  <p className="text-sm sm:text-base text-white/90">
                     Access subreddit insights with sentimental analysis &
                     keyword heat map
                   </p>

@@ -29,7 +29,7 @@ export function Engage() {
   return (
     <section
       id="engage-section"
-      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-primary"
     >
       <div className="max-w-7xl mx-auto">
         <div
@@ -45,16 +45,16 @@ export function Engage() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold border-2 border-primary text-primary uppercase tracking-wider">
+                  <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold border-2 border-white text-white uppercase tracking-wider">
                     ENGAGE
                   </span>
                 </div>
 
-                <h2 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+                <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
                   Build authentic relationships at scale
                 </h2>
 
-                <p className="text-lg text-gray-800 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   Engage meaningfully with your community by providing value,
                   answering questions, and building trust. Our AI helps craft
                   authentic responses that resonate with the Reddit community.
@@ -64,22 +64,22 @@ export function Engage() {
               {/* Feature list */}
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <MessageCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-800">
+                  <MessageCircle className="w-5 h-5 text-blue-100 mt-1 flex-shrink-0" />
+                  <p className="text-white/90">
                     AI-assisted response suggestions that match Reddit's culture
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Users className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-800">
+                  <Users className="w-5 h-5 text-blue-100 mt-1 flex-shrink-0" />
+                  <p className="text-white/90">
                     Build genuine connections with potential customers
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Heart className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-800">
+                  <Heart className="w-5 h-5 text-blue-100 mt-1 flex-shrink-0" />
+                  <p className="text-white/90">
                     Track engagement metrics and community sentiment
                   </p>
                 </div>

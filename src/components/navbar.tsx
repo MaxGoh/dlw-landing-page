@@ -107,7 +107,7 @@ export function Navbar() {
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <a
-                      href="#engage-section"
+                      href="#listen-section"
                       className="text-secondary hover:text-primary hover:bg-gray-50 px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] block rounded-md"
                       onClick={() => {
                         trackNavClick("listen");
@@ -215,7 +215,7 @@ export function Navbar() {
               Discovery
             </a>
             <a
-              href="#engage-section"
+              href="#listen-section"
               className="text-secondary hover:text-primary block px-6 py-2 text-base font-medium transition-colors font-[family-name:Ppmori,sans-serif]"
               onClick={() => {
                 trackNavClick("listen", true);
