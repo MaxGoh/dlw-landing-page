@@ -1,7 +1,7 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import readingTime from 'reading-time';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import readingTime from "reading-time";
 
 export interface BlogPost {
   slug: string;
@@ -24,7 +24,7 @@ export interface BlogPostMeta {
   readingTime: string;
 }
 
-const postsDirectory = path.join(process.cwd(), 'src/content/blog');
+const postsDirectory = path.join(process.cwd(), "src/content/blog");
 
 export function getAllPosts(): BlogPostMeta[] {
   if (!fs.existsSync(postsDirectory)) {
@@ -33,11 +33,11 @@ export function getAllPosts(): BlogPostMeta[] {
 
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames
-    .filter((fileName) => fileName.endsWith('.mdx'))
+    .filter((fileName) => fileName.endsWith(".mdx"))
     .map((fileName) => {
-      const slug = fileName.replace(/\.mdx$/, '');
+      const slug = fileName.replace(/\.mdx$/, "");
       const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(fileContents);
       const stats = readingTime(content);
 
@@ -47,7 +47,7 @@ export function getAllPosts(): BlogPostMeta[] {
         date: data.date,
         description: data.description,
         tags: data.tags || [],
-        author: data.author || 'Anonymous',
+        author: data.author || "Anonymous",
         readingTime: stats.text,
       } as BlogPostMeta;
     });
@@ -68,7 +68,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     return null;
   }
 
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
   const stats = readingTime(content);
 
@@ -78,7 +78,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     date: data.date,
     description: data.description,
     tags: data.tags || [],
-    author: data.author || 'Anonymous',
+    author: data.author || "Anonymous",
     readingTime: stats.text,
     content,
   };

@@ -1,11 +1,11 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Blog',
-    default: 'Blog',
+    template: "%s | Blog",
+    default: "Blog",
   },
-  description: 'Insights, tutorials, and updates from our team',
+  description: "Insights, tutorials, and updates from our team",
 };
 
 export default function BlogLayout({

@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Do Less Work | Reddit intelligence that drives traffic and boosts search ranking",
-  description: "Filter the noise in Reddit. Drive traffic, build authority and gain leads for your business",
+  title: "Do Less Work | Find customers for your business on Reddit",
+  description: "Our AI Marketing agent finds conversations, writes thoughtful replies, and brings you customers",
 };
 
 export default function RootLayout({

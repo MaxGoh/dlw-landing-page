@@ -8,16 +8,16 @@ import { Input } from "@/components/ui/input";
 import {
   MessageSquare,
   Search,
-  TrendingUp,
-  DollarSign,
   Clock,
-  MousePointer,
   Shield,
-  Lightbulb,
   Zap,
-  ScrollText,
+  ArrowRight,
+  Sparkles,
+  Users,
+  Target,
+  BarChart3,
+  CheckCircle2,
 } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import { trackButtonClick, trackFormSubmit } from "@/lib/analytics";
 
@@ -26,6 +26,7 @@ export function Hero() {
   const [placeholderText, setPlaceholderText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   const websiteExamples = [
     "microsoft.com",
@@ -93,7 +94,8 @@ export function Hero() {
     e.preventDefault();
     trackFormSubmit("hero_discover_form");
     // Navigate to consultation form
-    window.location.href = "https://form.typeform.com/to/J59frRUQ";
+    window.location.href =
+      "https://docs.google.com/forms/d/e/1FAIpQLScNv4caC6PJxIahcUqA8hlCqFRnBoLW9uLLvEo7LG2kdramRg/viewform?usp=header";
   };
 
   const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -102,106 +104,114 @@ export function Hero() {
   };
 
   return (
-    <section className="hero-pattern relative flex items-start justify-center px-4 pt-16 md:pt-20 lg:pt-24 xl:pt-28 pb-20 md:pb-28 lg:pb-32 xl:pb-40 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center px-4 py-20 overflow-hidden">
+      {/* Enhanced gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50 -z-20" />
+
+      {/* Animated grid pattern */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000000_70%,transparent_100%)]" />
+      </div>
+
       <div className="max-w-7xl mx-auto w-full">
         {/* Hero Content */}
-        <div className="space-y-6 lg:space-y-6 text-center">
+        <div className="space-y-8 text-center">
           {/* Announcement Badge */}
-          {/* <div className="flex justify-center animate-fadeInUp">
-            <a
-              href="https://form.typeform.com/to/J59frRUQ"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-primary/15 group"
-            >
-              <span className="px-2 py-0.5 text-xs font-bold bg-primary text-white rounded">
-                NEW
-              </span>
+          <div className="flex justify-center animate-fadeInUp">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 border border-primary/20 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4 text-primary animate-pulse" />
               <span className="text-sm font-semibold text-primary">
-                Limited Beta Access Available
+                AI-Powered Reddit Marketing Platform
               </span>
-            </a>
-          </div> */}
+            </div>
+          </div>
+
           {/* Main Headline & Description */}
-          <div className="space-y-8 lg:space-y-10 animate-fadeInUp animation-delay-100">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-balance text-secondary font-black tracking-tight">
-              <Image
-                src="/reddit.svg"
-                alt="Reddit logo"
-                width={56}
-                height={56}
-                className="inline-block w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 mr-2 align-baseline"
-              />
-              <span className="text-[#FF4500]">Reddit</span> intelligence{" "}
-              <br className="md:hidden" />
-              <br className="hidden lg:block" />
-              that drives{" "}
-              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-                traffic
-              </span>{" "}
-              <br className="md:hidden" />
-              and <br className="hidden lg:block" />
-              boosts{" "}
-              <span className="inline-block bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-                search rankings
+          <div className="space-y-6 animate-fadeInUp animation-delay-100">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-tight">
+              <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
+                Find customers for your business on{" "}
+                <span className="inline-flex items-baseline">
+                  <Image
+                    src="/reddit.svg"
+                    alt="Reddit logo"
+                    width={72}
+                    height={72}
+                    className="inline-block w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 relative -top-0.5 sm:-top-1"
+                  />
+                  <span className="text-[#FF4500] ml-2">Reddit</span>
+                </span>
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-balance">
-              Isolate the noise in Reddit. Drive traffic, build
-              authority, access reddit insights and gain leads for your
-              business.
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4 sm:px-0">
+              Our AI Marketing agent{" "}
+              <span className="text-gray-600">
+                finds conversations
+              </span>
+              ,{" "}
+              <span className=" text-gray-600">
+                writes thoughtful replies
+              </span>
+              , and{" "}
+              <span className=" text-gray-600">
+                brings you customers
+              </span>
             </p>
+
+            {/* Stats/Social Proof */}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 pt-4">
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-gray-700">
+                  24/7 Real-time Monitoring
+                </span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-gray-700">
+                  100K+ Subreddits Tracked
+                </span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-gray-700">
+                  Find customers while you sleep
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* CTA Form Section */}
-          <div className="space-y-6 max-w-2xl mx-auto animate-fadeInUp animation-delay-300">
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-4 w-full"
-            >
-              <div className="flex-1 relative">
-                <Input
-                  type="text"
-                  placeholder={placeholderText}
-                  value={websiteUrl}
-                  onChange={handleUrlChange}
-                  className="h-14 lg:h-16 text-base lg:text-lg px-6 bg-white/80 backdrop-blur-sm border-2 border-border/50 focus-visible:border-primary shadow-lg hover:shadow-xl transition-shadow"
-                />
-              </div>
+          {/* CTA Section */}
+          <div className="space-y-8 max-w-3xl mx-auto animate-fadeInUp animation-delay-300">
+            {/* Main CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                type="submit"
-                size="default"
-                className="h-14 lg:h-16 px-8 lg:px-10 bg-gradient-to-r from-primary to-blue-500 hover:from-primary/90 hover:to-blue-500/90 text-white font-bold text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
-                onClick={() => trackButtonClick("discover_now", "hero")}
+                size="lg"
+                className="group relative px-8 py-6 text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+                onClick={() => {
+                  trackButtonClick("join_waitlist", "hero");
+                  window.location.href =
+                    "https://docs.google.com/forms/d/e/1FAIpQLScNv4caC6PJxIahcUqA8hlCqFRnBoLW9uLLvEo7LG2kdramRg/viewform?usp=header";
+                }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
-                <Search className="w-5 h-5" />
-                <span>Book free consultation</span>
+                <span className="relative z-10 flex items-center gap-2">
+                  Join Waitlist
+                </span>
               </Button>
-            </form>
-
-            <p className="text-sm lg:text-base text-muted-foreground max-w-lg mx-auto">
-              We'll analyze your business to build a profile of your target
-              audience and identify the best communities to drive traffic and grow search ranking.
-            </p>
-
-            {/* Trust Badge */}
-            {/* <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/80 backdrop-blur-sm border border-primary/20 shadow-md">
-              <div className="relative">
-                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                <div className="absolute inset-0 w-3 h-3 bg-blue-500 rounded-full animate-ping opacity-75"></div>
-              </div>
-              <span className="text-sm lg:text-base font-semibold text-secondary">
-                Only 50 beta spots remaining
-              </span>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Background Decorations */}
+      {/* Animated background elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-r from-primary/5 to-blue-400/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl animate-pulse animation-delay-2000" />
+        <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-pulse animation-delay-400" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse animation-delay-300" />
       </div>
     </section>
   );

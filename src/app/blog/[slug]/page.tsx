@@ -1,12 +1,12 @@
-import { notFound } from 'next/navigation';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { getAllPosts, getPostBySlug } from '@/lib/blog';
-import { useMDXComponents } from '@/components/mdx-components';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypePrettyCode from 'rehype-pretty-code';
+import { notFound } from "next/navigation";
+import { Metadata } from "next";
+import Link from "next/link";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { useMDXComponents } from "@/components/mdx-components";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypePrettyCode from "rehype-pretty-code";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -19,15 +19,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata(
-  { params }: BlogPostPageProps
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
 
   if (!post) {
     return {
-      title: 'Post Not Found',
+      title: "Post Not Found",
     };
   }
 
@@ -37,13 +37,13 @@ export async function generateMetadata(
     openGraph: {
       title: post.title,
       description: post.description,
-      type: 'article',
+      type: "article",
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: post.title,
       description: post.description,
     },
@@ -76,10 +76,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
           <time dateTime={post.date}>
-            {new Date(post.date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
+            {new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
             })}
           </time>
           <span>·</span>
@@ -114,15 +114,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 rehypeAutolinkHeadings,
                 {
                   properties: {
-                    className: ['anchor'],
-                    ariaLabel: 'Link to section',
+                    className: ["anchor"],
+                    ariaLabel: "Link to section",
                   },
                 },
               ],
               [
                 rehypePrettyCode,
                 {
-                  theme: 'github-dark',
+                  theme: "github-dark",
                   keepBackground: true,
                 },
               ],

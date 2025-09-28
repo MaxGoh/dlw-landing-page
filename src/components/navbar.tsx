@@ -18,7 +18,7 @@ export function Navbar() {
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-transparent">
+    <nav className="w-full bg-transparent relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -40,7 +40,10 @@ export function Navbar() {
           <div className="hidden lg:flex items-center justify-center flex-1">
             <div className="flex items-baseline space-x-8">
               {/* Product Dropdown */}
-              <DropdownMenu open={isProductDropdownOpen} onOpenChange={setIsProductDropdownOpen}>
+              <DropdownMenu
+                open={isProductDropdownOpen}
+                onOpenChange={setIsProductDropdownOpen}
+              >
                 <DropdownMenuTrigger asChild>
                   <button
                     className="text-secondary hover:text-primary px-3 py-2 text-sm transition-colors font-[family-name:Ppmori,sans-serif] font-semibold flex items-center gap-1"
@@ -49,11 +52,11 @@ export function Navbar() {
                     Product
                     <ChevronDown
                       size={16}
-                      className={`transition-transform duration-200 ${isProductDropdownOpen ? 'rotate-180' : ''}`}
+                      className={`transition-transform duration-200 ${isProductDropdownOpen ? "rotate-180" : ""}`}
                     />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-white border border-gray-200 rounded-lg shadow-lg p-2 mt-2 min-w-[200px]">
+                <DropdownMenuContent className="bg-white border border-gray-200 rounded-lg shadow-lg p-2 mt-2 min-w-[200px] z-50">
                   <DropdownMenuItem asChild>
                     <a
                       href="#why-reddit-section"
@@ -146,8 +149,8 @@ export function Navbar() {
               onClick={() => trackButtonClick("book_demo", "navbar_desktop")}
               asChild
             >
-              <Link href="https://form.typeform.com/to/J59frRUQ">
-                Book a demo
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScNv4caC6PJxIahcUqA8hlCqFRnBoLW9uLLvEo7LG2kdramRg/viewform?usp=header">
+                Join waitlist
               </Link>
             </Button>
           </div>
@@ -256,8 +259,8 @@ export function Navbar() {
                 }}
                 asChild
               >
-                <Link href="https://form.typeform.com/to/J59frRUQ">
-                  Book a demo
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLScNv4caC6PJxIahcUqA8hlCqFRnBoLW9uLLvEo7LG2kdramRg/viewform?usp=header">
+                  Join waitlist
                 </Link>
               </Button>
             </div>

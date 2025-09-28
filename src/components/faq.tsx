@@ -95,7 +95,7 @@ export function FAQ() {
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">Still have questions?</p>
           <a
-            href="https://form.typeform.com/to/VVDtlvCz"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScNv4caC6PJxIahcUqA8hlCqFRnBoLW9uLLvEo7LG2kdramRg/viewform?usp=header"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-primary font-semibold hover:underline"

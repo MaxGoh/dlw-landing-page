@@ -31,9 +31,8 @@ export function TimeSaver() {
     <section id="time-saver-section" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div
-          className={`text-center space-y-8 transition-all duration-1000 transform ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`text-center space-y-8 transition-all duration-1000 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           {/* Main heading */}
           <div className="space-y-4">
@@ -91,8 +90,8 @@ export function TimeSaver() {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-10 py-7 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               onClick={() => trackButtonClick("book_demo", "time_saver")}
             >
-              <Link href="https://form.typeform.com/to/J59frRUQ">
-                Book a Demo
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScNv4caC6PJxIahcUqA8hlCqFRnBoLW9uLLvEo7LG2kdramRg/viewform?usp=header">
+                Join waitlist
               </Link>
             </Button>
             <p className="text-sm text-gray-500 mt-4">

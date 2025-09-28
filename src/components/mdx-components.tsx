@@ -1,6 +1,6 @@
-import type { MDXComponents } from 'mdx/types';
-import Image from 'next/image';
-import Link from 'next/link';
+import type { MDXComponents } from "mdx/types";
+import Image from "next/image";
+import Link from "next/link";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -39,9 +39,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </ol>
     ),
-    li: ({ children }) => (
-      <li className="ml-2">{children}</li>
-    ),
+    li: ({ children }) => <li className="ml-2">{children}</li>,
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-gray-300 dark:border-gray-600 pl-4 my-4 italic text-gray-600 dark:text-gray-400">
         {children}
@@ -60,7 +58,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     hr: () => <hr className="my-8 border-gray-300 dark:border-gray-700" />,
     a: ({ href, children }) => (
       <Link
-        href={href || '#'}
+        href={href || "#"}
         className="text-blue-600 dark:text-blue-400 hover:underline"
       >
         {children}
@@ -70,39 +68,39 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       if (!src) return null;
 
       // Handle relative paths for blog assets
-      const imageSrc = src.startsWith('/') ? src : `/blog-assets/${src}`;
+      const imageSrc = src.startsWith("/") ? src : `/blog-assets/${src}`;
 
       // Parse alt text for size parameter (format: "alt text|size:small" or "alt text|width:400")
-      let altText = alt || '';
+      let altText = alt || "";
       let imageWidth = 800;
       let imageHeight = 400;
-      let sizeClass = 'w-full';
+      let sizeClass = "w-full";
 
-      if (alt && alt.includes('|')) {
-        const [text, ...params] = alt.split('|');
+      if (alt && alt.includes("|")) {
+        const [text, ...params] = alt.split("|");
         altText = text.trim();
 
         params.forEach((param: string) => {
-          const [key, value] = param.split(':');
-          if (key === 'size') {
-            switch(value) {
-              case 'small':
-                sizeClass = 'max-w-sm';
+          const [key, value] = param.split(":");
+          if (key === "size") {
+            switch (value) {
+              case "small":
+                sizeClass = "max-w-sm";
                 imageWidth = 400;
                 imageHeight = 300;
                 break;
-              case 'medium':
-                sizeClass = 'max-w-md';
+              case "medium":
+                sizeClass = "max-w-md";
                 imageWidth = 600;
                 imageHeight = 400;
                 break;
-              case 'large':
-                sizeClass = 'max-w-2xl';
+              case "large":
+                sizeClass = "max-w-2xl";
                 imageWidth = 800;
                 imageHeight = 500;
                 break;
             }
-          } else if (key === 'width') {
+          } else if (key === "width") {
             imageWidth = parseInt(value) || 800;
             sizeClass = ``;
             imageHeight = Math.round(imageWidth * 0.625); // Maintain aspect ratio
@@ -119,7 +117,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
               width={imageWidth}
               height={imageHeight}
               className="rounded-lg h-auto"
-              style={{ maxWidth: '100%', height: 'auto' }}
+              style={{ maxWidth: "100%", height: "auto" }}
               {...props}
             />
           </div>
