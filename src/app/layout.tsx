@@ -18,8 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Do Less Work | Find customers for your business on Reddit",
-  description:
-    "Our AI Marketing agent finds conversations, writes thoughtful replies, and brings you customers",
+  description: "Our AI Marketing agent finds conversations, writes thoughtful replies, and brings you customers",
 };
 
 export default function RootLayout({

@@ -146,9 +146,17 @@ export function Hero() {
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto px-4 sm:px-0">
               Our AI Marketing agent{" "}
-              <span className="text-gray-600">finds conversations</span>,{" "}
-              <span className=" text-gray-600">writes thoughtful replies</span>,
-              and <span className=" text-gray-600">brings you customers</span>
+              <span className="text-gray-600">
+                finds conversations
+              </span>
+              ,{" "}
+              <span className=" text-gray-600">
+                writes thoughtful replies
+              </span>
+              , and{" "}
+              <span className=" text-gray-600">
+                brings you customers
+              </span>
             </p>
 
             {/* Stats/Social Proof */}
