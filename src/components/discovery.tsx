@@ -45,13 +45,12 @@ export function Discovery() {
   return (
     <section
       id="discovery-section"
-      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50"
+      className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <div
-          className={`relative overflow-hidden rounded-3xl px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${
-            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-          }`}
+          className={`relative overflow-hidden rounded-3xl px-8 py-16 sm:px-12 sm:py-20 lg:px-16 lg:py-24 transition-all duration-1000 transform ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+            }`}
           style={{
             transformOrigin: "center center",
           }}

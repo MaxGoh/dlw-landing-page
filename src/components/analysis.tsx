@@ -46,13 +46,12 @@ export function Analysis() {
   };
 
   return (
-    <section id="analysis-section" className="py-16 px-4 sm:px-6 lg:px-8">
+    <section id="analysis-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50">
       <div className="max-w-7xl mx-auto">
         {/* Container */}
         <div
-          className={`relative px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${
-            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-          }`}
+          className={`relative px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-24 transition-all duration-1000 transform overflow-hidden ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+            }`}
           style={{
             transformOrigin: "center center",
           }}
